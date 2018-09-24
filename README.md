@@ -5,8 +5,8 @@
 ### Compile
 download this repository <br />
 ```
-cd 2dring <br />
-make <br />
+cd 2dring 
+make
 ```
 ### Usage
 mpirun -np <numprocs> 2dring <N> [number of vectors] <M> [length of each vector] <output> [path of output] <src> [path of src] <x_d> [x dimension of 2dring] <br />
