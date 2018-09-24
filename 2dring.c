@@ -150,10 +150,7 @@ double correlation(double *x, double *y, int len, double x_mean,double x_var, do
     corr = cov/(sqrt(x_var)*sqrt(y_var));
 
     if(myid == 5)
-    {
-        printf("");
-    } 
-        //printf("checked correlation result: %lf, %lf, var: %lf, %lf , corr is %lf\n",x_mean,y_mean,x_var,y_var,corr);
+        printf("checked correlation result: %lf, %lf, var: %lf, %lf , corr is %lf\n",x_mean,y_mean,x_var,y_var,corr);
     
     return corr;
 }
