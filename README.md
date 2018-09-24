@@ -15,6 +15,6 @@ mpirun -np 32 2dring -N 1024 -M 1000 -output correaltion_matrix.txt -src sample_
 ```
 or
 ```
-srun -n 16 -d 24 2dring -N 1024 -M 1000 -output correaltion_matrix.txt -src sample_data.txt -x 2 <br />
+srun -n 16 -d 24 2dring -N 1024 -M 1000 -output correaltion_matrix.txt -src sample_data.txt -x 2
 ```
 Notice, currently numprocs should be divisible by xd, and numprocs/xd should be even. <br />
