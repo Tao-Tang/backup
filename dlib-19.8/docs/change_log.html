@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns:gcse="googleCustomSearch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="shortcut icon" href="dlib-icon.ico"><meta name="verify-v1" content="02MiiaFNVzS5/u0eQhsy3/knioFHsia1X3DXRpHkE6I="><meta name="google-site-verification" content="DGSSJMKDomaDaDTIRJ8jDkv0YMx9Cz7OESbXHjjr6Jw"><title>dlib C++ Library
+               - Change Log</title><script type="text/javascript" src="dlib.js"></script><link rel="stylesheet" type="text/css" href="dlib.css"></head><body><a name="top"></a><div id="page_header"><a href="http://dlib.net"><img src="dlib-logo.png"></a></div><div id="top_content"><div id="main_menu" class="menu"><div class="menu_top"><b>The Library</b><ul class="tree"><li><a href="algorithms.html" class="menu">Algorithms</a></li><li><a href="api.html" class="menu">API Wrappers</a></li><li><a href="bayes.html" class="menu">Bayesian Nets</a></li><li><a href="compression.html" class="menu">Compression</a></li><li><a href="containers.html" class="menu">Containers</a></li><li><a href="graph_tools.html" class="menu">Graph Tools</a></li><li><a href="imaging.html" class="menu">Image Processing</a></li><li><a href="linear_algebra.html" class="menu">Linear Algebra</a></li><li><a href="ml.html" class="menu">Machine Learning</a></li><li><a href="metaprogramming.html" class="menu">Metaprogramming</a></li><li><a href="other.html" class="menu">Miscellaneous</a></li><li><a href="network.html" class="menu">Networking</a></li><li><a href="optimization.html" class="menu">Optimization</a></li><li><a href="parsing.html" class="menu">Parsing</a></li></ul><br><b>Help/Info</b><ul class="tree"><li><a href="http://blog.dlib.net" class="menu">Dlib Blog</a></li><li><a onclick="Toggle(this)" class="sub menu"><img src="plus.gif">Examples: C++</a><ul style="display:none;"><li><a href="3d_point_cloud_ex.cpp.html" class="menu">3D Point Cloud</a></li><li><a href="assignment_learning_ex.cpp.html" class="menu">Assignment Learning</a></li><li><a href="file_to_code_ex.cpp.html" class="menu">Base64 Encoder</a></li><li><a href="bayes_net_from_disk_ex.cpp.html" class="menu">Bayesian Network From Disk</a></li><li><a href="bayes_net_gui_ex.cpp.html" class="menu">Bayesian Network GUI</a></li><li><a href="bayes_net_ex.cpp.html" class="menu">Bayesian Network</a></li><li><a href="bridge_ex.cpp.html" class="menu">Bridge</a></li><li><a href="bsp_ex.cpp.html" class="menu">BSP</a></li><li><a href="svm_c_ex.cpp.html" class="menu">C-Support Vector Machine</a></li><li><a href="compress_stream_ex.cpp.html#_top" class="menu">Cmd Line Parser</a></li><li><a href="compress_stream_ex.cpp.html" class="menu">Compress Stream</a></li><li><a href="config_reader_ex.cpp.html" class="menu">Config File Reader</a></li><li><a href="custom_trainer_ex.cpp.html" class="menu">Custom Trainers</a></li><li><a href="dnn_face_recognition_ex.cpp.html" class="menu">Deep Face Recognition</a></li><li><a href="dnn_mmod_dog_hipsterizer.cpp.html" class="menu">Deep Learning Dog Hipsterizer</a></li><li><a href="dnn_mmod_face_detection_ex.cpp.html" class="menu">Deep Learning Face Detection</a></li><li><a href="dnn_imagenet_ex.cpp.html" class="menu">Deep Learning Imagenet Classifier</a></li><li><a href="dnn_imagenet_train_ex.cpp.html" class="menu">Deep Learning Imagenet Trainer </a></li><li><a href="dnn_inception_ex.cpp.html" class="menu">Deep Learning Inception</a></li><li><a href="dnn_introduction_ex.cpp.html" class="menu">Deep Learning Introduction Part 1</a></li><li><a href="dnn_introduction2_ex.cpp.html" class="menu">Deep Learning Introduction Part 2</a></li><li><a href="dnn_mmod_ex.cpp.html" class="menu">Deep Learning Max-Margin Object Detection</a></li><li><a href="dnn_mmod_find_cars2_ex.cpp.html" class="menu">Deep Learning Multi-Class Vehicle Detection</a></li><li><a href="dnn_semantic_segmentation_train_ex.cpp.html" class="menu">Deep Learning Semantic Segmentation Trainer</a></li><li><a href="dnn_semantic_segmentation_ex.cpp.html" class="menu">Deep Learning Semantic Segmentation</a></li><li><a href="dnn_mmod_train_find_cars_ex.cpp.html" class="menu">Deep Learning Vehicle Detection Trainer</a></li><li><a href="dnn_mmod_find_cars_ex.cpp.html" class="menu">Deep Learning Vehicle Detection</a></li><li><a href="dnn_metric_learning_ex.cpp.html" class="menu">Deep Metric Learning Introduction</a></li><li><a href="dnn_metric_learning_on_images_ex.cpp.html" class="menu">Deep Metric Learning on Images</a></li><li><a href="dir_nav_ex.cpp.html" class="menu">Directory Navigation</a></li><li><a href="empirical_kernel_map_ex.cpp.html" class="menu">Empirical Kernel Map</a></li><li><a href="face_detection_ex.cpp.html" class="menu">Face Detection</a></li><li><a href="face_landmark_detection_ex.cpp.html" class="menu">Face Landmark Detection</a></li><li><a href="fhog_ex.cpp.html" class="menu">FHOG Feature Extraction</a></li><li><a href="fhog_object_detector_ex.cpp.html" class="menu">FHOG Object Detection</a></li><li><a href="graph_labeling_ex.cpp.html" class="menu">Graph Labeling</a></li><li><a href="gui_api_ex.cpp.html" class="menu">GUI</a></li><li><a href="hough_transform_ex.cpp.html" class="menu">Hough Transform</a></li><li><a href="server_http_ex.cpp.html" class="menu">HTTP Server</a></li><li><a href="image_ex.cpp.html" class="menu">Image</a></li><li><a href="iosockstream_ex.cpp.html" class="menu">IO Socket Streams</a></li><li><a href="server_iostream_ex.cpp.html" class="menu">IO Streams Server</a></li><li><a href="kcentroid_ex.cpp.html" class="menu">Kernel Centroid</a></li><li><a href="kkmeans_ex.cpp.html" class="menu">Kernel K-Means Clustering</a></li><li><a href="krr_regression_ex.cpp.html" class="menu">Kernel Ridge Regression</a></li><li><a href="krls_filter_ex.cpp.html" class="menu">Kernel RLS Filtering</a></li><li><a href="krls_ex.cpp.html" class="menu">Kernel RLS Regression</a></li><li><a href="krr_classification_ex.cpp.html" class="menu">KRR Classification</a></li><li><a href="learning_to_track_ex.cpp.html" class="menu">Learning to Track</a></li><li><a href="max_cost_assignment_ex.cpp.html" class="menu">Linear Assignment Problems</a></li><li><a href="linear_manifold_regularizer_ex.cpp.html" class="menu">Linear Manifold Regularizer</a></li><li><a href="mpc_ex.cpp.html" class="menu">Linear Model Predictive Control</a></li><li><a href="logger_ex_2.cpp.html" class="menu">Logger Advanced</a></li><li><a href="logger_custom_output_ex.cpp.html" class="menu">Logger Custom Output</a></li><li><a href="logger_ex.cpp.html" class="menu">Logger</a></li><li><a href="matrix_expressions_ex.cpp.html" class="menu">Matrix Expressions</a></li><li><a href="matrix_ex.cpp.html" class="menu">Matrix</a></li><li><a href="member_function_pointer_ex.cpp.html" class="menu">Member Function Pointer</a></li><li><a href="model_selection_ex.cpp.html" class="menu">Model Selection</a></li><li><a href="multiclass_classification_ex.cpp.html" class="menu">Multiclass Classification</a></li><li><a href="multithreaded_object_ex.cpp.html" class="menu">Multithreaded Object</a></li><li><a href="mlp_ex.cpp.html" class="menu">Neural Network</a></li><li><a href="least_squares_ex.cpp.html" class="menu">Non-Linear Least Squares</a></li><li><a href="svm_ex.cpp.html" class="menu">Nu-Support Vector Machine</a></li><li><a href="integrate_function_adapt_simp_ex.cpp.html" class="menu">Numerical Integration</a></li><li><a href="object_detector_advanced_ex.cpp.html" class="menu">Object Detector Advanced</a></li><li><a href="object_detector_ex.cpp.html" class="menu">Object Detector</a></li><li><a href="one_class_classifiers_ex.cpp.html" class="menu">One Class Classifiers</a></li><li><a href="svm_pegasos_ex.cpp.html" class="menu">Online SVM</a></li><li><a href="optimization_ex.cpp.html" class="menu">Optimization</a></li><li><a href="parallel_for_ex.cpp.html" class="menu">Parallel For Loops</a></li><li><a href="pipe_ex_2.cpp.html" class="menu">Pipe 2</a></li><li><a href="pipe_ex.cpp.html" class="menu">Pipe</a></li><li><a href="quantum_computing_ex.cpp.html" class="menu">Quantum Computing</a></li><li><a href="queue_ex.cpp.html" class="menu">Queue</a></li><li><a href="random_cropper_ex.cpp.html" class="menu">Random Cropper</a></li><li><a href="rank_features_ex.cpp.html" class="menu">Rank Features</a></li><li><a href="rvm_ex.cpp.html" class="menu">Relevance Vector Classification</a></li><li><a href="rvm_regression_ex.cpp.html" class="menu">Relevance Vector Regression</a></li><li><a href="running_stats_ex.cpp.html" class="menu">Running Stats</a></li><li><a href="sequence_labeler_ex.cpp.html" class="menu">Sequence Labeling</a></li><li><a href="sequence_segmenter_ex.cpp.html" class="menu">Sequence Segmentation</a></li><li><a href="sockets_ex.cpp.html" class="menu">Sockets</a></li><li><a href="sockstreambuf_ex.cpp.html" class="menu">Sockstreambuf</a></li><li><a href="svm_sparse_ex.cpp.html" class="menu">Sparse Vectors</a></li><li><a href="sqlite_ex.cpp.html" class="menu">SQLite</a></li><li><a href="std_allocator_ex.cpp.html" class="menu">Std C++ Allocator</a></li><li><a href="svm_struct_ex.cpp.html" class="menu">Structural Support Vector Machines</a></li><li><a href="svr_ex.cpp.html" class="menu">Support Vector Regression</a></li><li><a href="surf_ex.cpp.html" class="menu">SURF</a></li><li><a href="svm_rank_ex.cpp.html" class="menu">SVM-Rank</a></li><li><a href="thread_function_ex.cpp.html" class="menu">Thread Function</a></li><li><a href="thread_pool_ex.cpp.html" class="menu">Thread Pool</a></li><li><a href="threaded_object_ex.cpp.html" class="menu">Threaded Object</a></li><li><a href="threads_ex.cpp.html" class="menu">Threads</a></li><li><a href="timer_ex.cpp.html" class="menu">Timer</a></li><li><a href="train_object_detector.cpp.html" class="menu">Train Object Detector</a></li><li><a href="train_shape_predictor_ex.cpp.html" class="menu">Train Shape Predictor</a></li><li><a href="using_custom_kernels_ex.cpp.html" class="menu">Using Custom Kernels</a></li><li><a href="video_tracking_ex.cpp.html" class="menu">Video Object Tracking</a></li><li><a href="webcam_face_pose_ex.cpp.html" class="menu">Webcam Face Pose Estimation</a></li><li><a href="xml_parser_ex.cpp.html" class="menu">XML Parser</a></li></ul></li><li><a onclick="Toggle(this)" class="sub menu"><img src="plus.gif">Examples: Python</a><ul style="display:none;"><li><a href="svm_binary_classifier.py.html" class="menu">Binary Classification</a></li><li><a href="cnn_face_detector.py.html" class="menu">CNN Face Detector</a></li><li><a href="face_alignment.py.html" class="menu">Face Alignment</a></li><li><a href="face_clustering.py.html" class="menu">Face Clustering</a></li><li><a href="face_detector.py.html" class="menu">Face Detector</a></li><li><a href="face_jitter.py.html" class="menu">Face Jittering/Augmentation</a></li><li><a href="face_landmark_detection.py.html" class="menu">Face Landmark Detection</a></li><li><a href="face_recognition.py.html" class="menu">Face Recognition</a></li><li><a href="find_candidate_object_locations.py.html" class="menu">Find Candidate Object Locations</a></li><li><a href="global_optimization.py.html" class="menu">Global Optimization</a></li><li><a href="max_cost_assignment.py.html" class="menu">Linear Assignment Problems</a></li><li><a href="sequence_segmenter.py.html" class="menu">Sequence Segmenter</a></li><li><a href="svm_struct.py.html" class="menu">Structural Support Vector Machines</a></li><li><a href="svm_rank.py.html" class="menu">SVM-Rank</a></li><li><a href="train_object_detector.py.html" class="menu">Train Object Detector</a></li><li><a href="train_shape_predictor.py.html" class="menu">Train Shape Predictor</a></li><li><a href="correlation_tracker.py.html" class="menu">Video Object Tracking</a></li></ul></li><li><a href="faq.html" class="menu">FAQ</a></li><li><a href="index.html" class="menu">Home</a></li><li><a href="compile.html" class="menu">How to compile</a></li><li><a href="howto_contribute.html" class="menu">How to contribute</a></li><li><a href="term_index.html" class="menu">Index</a></li><li><a href="intro.html" class="menu">Introduction</a></li><li><a href="license.html" class="menu">License</a></li><li><a href="python/index.html" class="menu">Python API</a></li><li><a href="books.html" class="menu">Suggested Books</a></li><li><a href="http://sourceforge.net/p/dclib/wiki/Known_users/" class="menu">Who uses dlib?</a></li></ul><br><b>Current Release</b><ul class="tree"><li><a href="change_log.html" class="menu">Change Log</a></li><li><a href="release_notes.html" class="menu">Release Notes</a></li><li>Version: 19.8</li></ul><br></div><div class="menu_footer">
+      Last Modified:<br>Dec 19, 2017</div></div><div id="main_text"><div id="main_text_title">Change Log</div><div id="main_text_body"><u>Revision</u>: fef491c3b8182c68<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 19, 2017
+         (16:15:28 UTC)
+      <br><p style="margin:0.4em">Created release v19.8</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 3d917692ac8ab43c<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 19, 2017
+         (09:18:55 UTC)
+      <br><p style="margin:0.4em">Removed an assert used for debugging that shouldn't have been committed.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/random_cropper.h</div></div><hr class="fullhr"><u>Revision</u>: 94abd62c1124f2af<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 19, 2017
+         (05:57:07 UTC)
+      <br><p style="margin:0.4em">Fixed set_colm() and set_rowm() not being assignable from some matrix
+expressions.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/matrix/matrix_blas_bindings.h</div><div class="row1">dlib/test/matrix.cpp</div></div><hr class="fullhr"><u>Revision</u>: 1662c169b5b4c6b9<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 19, 2017
+         (04:59:55 UTC)
+      <br><p style="margin:0.4em">Made unit test more robust.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/test/global_optimization.cpp</div></div><hr class="fullhr"><u>Revision</u>: 08908ad3f420a5ae<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 19, 2017
+         (01:34:49 UTC)
+      <br><p style="margin:0.4em">Fixed initial point selection to only happen once.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search.cpp</div></div><hr class="fullhr"><u>Revision</u>: e968c246e86cfa36<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 18, 2017
+         (11:20:21 UTC)
+      <br><p style="margin:0.4em">Minor update</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/model_selection_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: ec042547cb06c4a7<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 18, 2017
+         (10:59:23 UTC)
+      <br><p style="margin:0.4em">Added a minor optimization.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search.cpp</div><div class="row1">dlib/test/global_optimization.cpp</div></div><hr class="fullhr"><u>Revision</u>: 9b23de588b165989<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 18, 2017
+         (10:07:41 UTC)
+      <br><p style="margin:0.4em">Fixed problem with openmp linking</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div><div class="row1">dlib/cmake_utils/cmake_find_blas.txt</div></div><hr class="fullhr"><u>Revision</u>: 81ce6ee1d0be74bf<br><u>Author</u>: <a href="mailto:dhirvonen@elucideye.com">David Hirvonen</a><br><u>Date</u>: Dec 17, 2017
+         (15:18:44 UTC)
+      <br><p style="margin:0.4em">add chrono::duration_cast&lt;&gt;() cast for clang error (#1019)
+
+* fix chrono cast for llvm
+
+https://stackoverflow.com/a/18284105
+
+tested: clang-3.9, clang-5.0
+
+```
+/Source/dlib/dir_nav/dir_nav_kernel_2.h:397:31: error: no viable overloaded '+='
+                last_modified += std::chrono::nanoseconds(buffer.st_atim.tv_nsec);
+                ~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/v1/chrono:782:43: note: candidate function not viable: no known conversion from 'duration&lt;[...], ratio&lt;[...], 1000000000&gt;&gt;' to 'const duration&lt;[...], ratio&lt;[...], 1000000&gt;&gt;' for 1st argument
+    _LIBCPP_INLINE_VISIBILITY time_point&amp; operator+=(const duration&amp; __d) {__d_ += __d; return *this;}
+                                          ^
+Source/dlib/dir_nav/dir_nav_kernel_2.cpp:69:33: error: no viable overloaded '+='
+            state.last_modified += std::chrono::nanoseconds(buffer.st_atim.tv_nsec);
+            ~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/v1/chrono:782:43: note: candidate function not viable: no known conversion from 'duration&lt;[...], ratio&lt;[...], 1000000000&gt;&gt;' to 'const duration&lt;[...], ratio&lt;[...], 1000000&gt;&gt;' for 1st argument
+    _LIBCPP_INLINE_VISIBILITY time_point&amp; operator+=(const duration&amp; __d) {__d_ += __d; return *this;}
+```
+
+* fix typo</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dir_nav/dir_nav_kernel_2.cpp</div><div class="row1">dlib/dir_nav/dir_nav_kernel_2.h</div></div><hr class="fullhr"><u>Revision</u>: 351ebdcb19bd65d3<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 17, 2017
+         (09:41:00 UTC)
+      <br><p style="margin:0.4em">Changed this example to use repeat layers.  This doesn't change the behavior of
+the code, but it helps visual studio use less RAM when building the example,
+and might make appveyor not crash.  It's also a
+slightly cleaner way to write the code anyway.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/dnn_semantic_segmentation_ex.h</div></div><hr class="fullhr"><u>Revision</u>: 85bf1aad671e76ba<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 17, 2017
+         (08:46:37 UTC)
+      <br><p style="margin:0.4em">Check if appveyor's VS2017 is the newest version.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/appveyor/examples.yml</div></div><hr class="fullhr"><u>Revision</u>: 7f5e338f0d255b30<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 17, 2017
+         (04:02:07 UTC)
+      <br><p style="margin:0.4em">Updated messages about what versions of visual studio have good enough C++11 support.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/add_python_module</div><div class="row1">dlib/cmake_utils/set_compiler_specific_options.cmake</div></div><hr class="fullhr"><u>Revision</u>: 02c4f9aaef5f72bf<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 17, 2017
+         (03:23:43 UTC)
+      <br><p style="margin:0.4em">Split appveyor build scripts into parts so they don't error out from being too big.</p><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">dlib/appveyor/dtest.yml</div><div class="row1">dlib/appveyor/examples.yml</div></div><div class="logb"><div class="bsolid"><b><font color="red">Deleted</font></b></div><div class="row2">appveyor.yml</div></div><hr class="fullhr"><u>Revision</u>: 591a0011897707cc<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 16, 2017
+         (18:17:37 UTC)
+      <br><p style="margin:0.4em">Improved visual studio compilation instructions</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 5504a0de9a3c3b45<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 16, 2017
+         (17:34:22 UTC)
+      <br><p style="margin:0.4em">Merged</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/upper_bound_function.h</div><div class="row1">dlib/global_optimization/upper_bound_function_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 1e45c8f824fc4551<br><u>Author</u>: <a href="mailto:ernestotapiar@users.noreply.github.com">ernestotapiar</a><br><u>Date</u>: Dec 15, 2017
+         (24:12:58 UTC)
+      <br><p style="margin:0.4em">little corrections in global optimization (#1016)
+
+* Removed redudant (repeated) definition of sample_type.
+
+* Added return statement in the documentation of the (lambda) upper bound
+function.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/upper_bound_function.h</div><div class="row1">dlib/global_optimization/upper_bound_function_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 3c244dce053b1b6e<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 16, 2017
+         (06:26:40 UTC)
+      <br><p style="margin:0.4em">Fixed grammar</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/optimization/optimization_trust_region_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 2417f8c37b6011ff<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 15, 2017
+         (12:08:49 UTC)
+      <br><p style="margin:0.4em">clarified spec</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/upper_bound_function_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: a6bf6bc3416703ee<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 15, 2017
+         (06:30:19 UTC)
+      <br><p style="margin:0.4em">Clarified spec</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 82b38c4a2a4ca4d9<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 14, 2017
+         (03:06:16 UTC)
+      <br><p style="margin:0.4em">Improved error messages for people who have incorrectly installed boost in windows.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/add_python_module</div></div><hr class="fullhr"><u>Revision</u>: c8c167dcc5e01115<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 12, 2017
+         (16:57:04 UTC)
+      <br><p style="margin:0.4em">Added python bindings for count_steps_without_decrease() and count_steps_without_decrease_robust()</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/other.cpp</div></div><hr class="fullhr"><u>Revision</u>: 8e171f495e4698c3<br><u>Author</u>: <a href="mailto:aronrubin@gmail.com">Aron Rubin</a><br><u>Date</u>: Dec 12, 2017
+         (16:23:47 UTC)
+      <br><p style="margin:0.4em">Fixed type passing to opencv to use basic instead of aggregate. (#1010)
+
+* Fixed type passing to opencv to use basic instead of aggregate.
+
+* Change tabs to spaces.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/opencv/to_open_cv.h</div></div><hr class="fullhr"><u>Revision</u>: cefc32136b3da7a7<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 12, 2017
+         (01:36:37 UTC)
+      <br><p style="margin:0.4em">Fixed DLIB_ISO_CPP_ONLY not building.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div><div class="row1">dlib/all/source.cpp</div></div><hr class="fullhr"><u>Revision</u>: c2a4495ce3e8c31a<br><u>Author</u>: <a href="mailto:wyd1520@163.com">wyd1520</a><br><u>Date</u>: Dec 12, 2017
+         (10:20:31 UTC)
+      <br><p style="margin:0.4em">Change VS2015 Update3 MSVC Version v19.0.24215.1 To v19.0.24210.0 (#1009)</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/set_compiler_specific_options.cmake</div></div><hr class="fullhr"><u>Revision</u>: e92d89dd296ed3d8<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 11, 2017
+         (01:40:00 UTC)
+      <br><p style="margin:0.4em">Fixed spelling error in comment</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 7731b8fff8332d8e<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 10, 2017
+         (10:33:46 UTC)
+      <br><p style="margin:0.4em">Better travis python testing.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">.travis.yml</div><div class="row1">dlib/travis/build-and-test.sh</div></div><hr class="fullhr"><u>Revision</u>: 95a2f74aa9f62ea3<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 10, 2017
+         (10:25:21 UTC)
+      <br><p style="margin:0.4em">Try to fix travis build</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/travis/build-and-test.sh</div></div><hr class="fullhr"><u>Revision</u>: 911d65885af78570<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 10, 2017
+         (10:24:45 UTC)
+      <br><p style="margin:0.4em">Improved cmake's finding of the right python interpreter.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/add_python_module</div></div><hr class="fullhr"><u>Revision</u>: 12be4f07888a4212<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 10, 2017
+         (09:57:00 UTC)
+      <br><p style="margin:0.4em">Tell the python3 tests to use python3</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/travis/build-and-test.sh</div></div><hr class="fullhr"><u>Revision</u>: 6ea80b1865e8c8ca<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 10, 2017
+         (09:48:09 UTC)
+      <br><p style="margin:0.4em">Minor tweak</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_max_global.h</div><div class="row1">dlib/global_optimization/find_max_global_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: bbe33aaaebda370f<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 10, 2017
+         (09:44:31 UTC)
+      <br><p style="margin:0.4em">Make travis build both python2 and python3 versions of the python extension.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">.travis.yml</div><div class="row1">dlib/travis/build-and-test.sh</div></div><hr class="fullhr"><u>Revision</u>: 60019c50ec69fa42<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 09, 2017
+         (15:53:35 UTC)
+      <br><p style="margin:0.4em">Made random_cropper's API a little more convenient for cropping out only
+background crops.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/random_cropper.h</div><div class="row1">dlib/image_transforms/random_cropper_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 765f71aac76a690b<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 09, 2017
+         (15:52:07 UTC)
+      <br><p style="margin:0.4em">The previous commit broke for pyhton2 but fixed python3.  This should deal with
+numpy's import_array() in a more robust way.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/dlib.cpp</div><div class="row1">tools/python/src/numpy_returns.cpp</div><div class="row2">tools/python/src/numpy_returns_stub.cpp</div></div><hr class="fullhr"><u>Revision</u>: 6703f0dfaf08fff9<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 09, 2017
+         (14:51:20 UTC)
+      <br><p style="margin:0.4em">Numpy's import_array() macro in python3 requires the calling function to return
+void*.  But the previous code didn't so it wouldn't compile.  Fixed that
+problem.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/dlib.cpp</div><div class="row1">tools/python/src/numpy_returns.cpp</div><div class="row2">tools/python/src/numpy_returns_stub.cpp</div></div><hr class="fullhr"><u>Revision</u>: 1dbced08946eb9d7<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 08, 2017
+         (05:16:08 UTC)
+      <br><p style="margin:0.4em">A little bit of cleanup</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">python_examples/face_jitter.py</div></div><hr class="fullhr"><u>Revision</u>: d54c33f16e6371c9<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 08, 2017
+         (05:09:50 UTC)
+      <br><p style="margin:0.4em">Made this file executable</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">python_examples/face_jitter.py</div></div><hr class="fullhr"><u>Revision</u>: 67e848f1de8c4f85<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 08, 2017
+         (05:09:30 UTC)
+      <br><p style="margin:0.4em">cleaned up cmake</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: eba177eb9652e560<br><u>Author</u>: <a href="mailto:31665404+visionworkz@users.noreply.github.com">visionworkz</a><br><u>Date</u>: Dec 08, 2017
+         (30:59:27 UTC)
+      <br><p style="margin:0.4em">Exposed jitter_image in Python and added an example (#980)
+
+* Exposed jitter_image in Python and added an example
+
+* Return Numpy array directly
+
+* Require numpy during setup
+
+* Added install of Numpy before builds
+
+* Changed pip install for user only due to security issues.
+
+* Removed malloc
+
+* Made presence of Numpy during compile optional.
+
+* Conflict
+
+* Refactored get_face_chip/get_face_chips to use Numpy as well.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">appveyor.yml</div><div class="row1">dlib/travis/build-and-test.sh</div><div class="row2">python_examples/face_alignment.py</div><div class="row1">setup.py</div><div class="row2">tools/python/CMakeLists.txt</div><div class="row1">tools/python/src/dlib.cpp</div><div class="row2">tools/python/src/face_recognition.cpp</div><div class="row1">tools/python/src/image.cpp</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">examples/faces/Tom_Cruise_avp_2014_4.jpg</div><div class="row1">python_examples/face_jitter.py</div><div class="row2">tools/python/src/numpy_returns.cpp</div><div class="row1">tools/python/src/numpy_returns_stub.cpp</div></div><hr class="fullhr"><u>Revision</u>: 4881802d52fbcdea<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 08, 2017
+         (04:39:52 UTC)
+      <br><p style="margin:0.4em">Fixed spelling error that broke cmake just now.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 4b54c0247dfb20a1<br><u>Author</u>: <a href="mailto:hesam.ohadi@gmail.com">Kino</a><br><u>Date</u>: Dec 08, 2017
+         (04:53:29 UTC)
+      <br><p style="margin:0.4em">don't look for OpenMP with Apple Clang (#1002)
+
+look at issue:
+https://github.com/davisking/dlib/issues/674</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 4287d80d0e72860c<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 08, 2017
+         (04:08:09 UTC)
+      <br><p style="margin:0.4em">Added USE_NEON_INSTRUCTIONS cmake option.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/set_compiler_specific_options.cmake</div></div><hr class="fullhr"><u>Revision</u>: 1f23d299f11ee131<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 08, 2017
+         (04:07:49 UTC)
+      <br><p style="margin:0.4em">Fixed incorrect printing of blas warning message.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/cmake_find_blas.txt</div></div><hr class="fullhr"><u>Revision</u>: 4e06ffd2c0c55ade<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 07, 2017
+         (03:11:55 UTC)
+      <br><p style="margin:0.4em">Changed the windows signaler and mutex code to use the C++11 thread library instead of
+the old win32 functions.  I did this to work around how windows unloads dlls.  In particular, during dll unload
+windows will kill all threads, THEN it will destruct global objects.  So this leads to problems
+where a global obejct that owns threads tries to tell them to shutdown and everything goes wrong.
+The specific problem this code change fixes is when signaler::broadcast() is called
+on a signaler that was being waited on by one of these abruptly killed threads.  In that case, the old
+code would deadlock inside signaler::broadcast().  This new code doesn't seem to have that problem,
+thereby mitigating the windows dll unload behavior in some situations.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/threads/threads_kernel_1.h</div></div><hr class="fullhr"><u>Revision</u>: bb1f9991d4ea7385<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 05, 2017
+         (10:10:41 UTC)
+      <br><p style="margin:0.4em">Added a missing assert.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/face_recognition.cpp</div></div><hr class="fullhr"><u>Revision</u>: 0fbe493258bbd07f<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 04, 2017
+         (16:47:43 UTC)
+      <br><p style="margin:0.4em">Filled out the documentation</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search_abstract.h</div><div class="row1">dlib/global_optimization/upper_bound_function_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 0f28d6dd3e8b668a<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 04, 2017
+         (12:09:18 UTC)
+      <br><p style="margin:0.4em">Fixed shape_predictor_trainer padding so that it behaves as it used to.  In
+dlib 19.7 the padding code was changed and accidentally doubled the size of the
+applied padding when in the older (and still default) landmark_relative padding
+mode.  It's not a huge deal either way, but this change reverts back to the
+intended behavior.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_processing/shape_predictor_trainer.h</div></div><hr class="fullhr"><u>Revision</u>: c3b0f5fe8563fa69<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 04, 2017
+         (07:57:38 UTC)
+      <br><p style="margin:0.4em">Changed test_regression_function() and cross_validate_regression_trainer() to
+output correlation rather than squared correlation.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/svm/cross_validate_regression_trainer.h</div><div class="row1">dlib/svm/cross_validate_regression_trainer_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: ce8122891fadf677<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 04, 2017
+         (07:29:51 UTC)
+      <br><p style="margin:0.4em">Fixed a very small bias in rand::get_random_double()</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/rand/rand_kernel_1.h</div></div><hr class="fullhr"><u>Revision</u>: 2154c0e2dc7d8260<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 02, 2017
+         (10:21:23 UTC)
+      <br><p style="margin:0.4em">Fixed grammar</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: a70fbba8fde7d053<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 02, 2017
+         (03:55:24 UTC)
+      <br><p style="margin:0.4em">Changed example to use minimization rather than maximization.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">python_examples/global_optimization.py</div></div><hr class="fullhr"><u>Revision</u>: 905c54f3baa202a7<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 02, 2017
+         (03:55:02 UTC)
+      <br><p style="margin:0.4em">Added python interface to find_min_global()</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/global_optimization.cpp</div></div><hr class="fullhr"><u>Revision</u>: 241dc3881e43952a<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 02, 2017
+         (02:53:31 UTC)
+      <br><p style="margin:0.4em">Added find_min_global() overloads.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_max_global.h</div><div class="row1">dlib/global_optimization/find_max_global_abstract.h</div><div class="row2">dlib/test/global_optimization.cpp</div><div class="row1">examples/optimization_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: 548deb5fb1cce36a<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 01, 2017
+         (15:15:16 UTC)
+      <br><p style="margin:0.4em">Updated to use thread_local instead of old thread_specific_data class.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/stack_trace.cpp</div></div><hr class="fullhr"><u>Revision</u>: 5f222107dac916cb<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 01, 2017
+         (14:53:57 UTC)
+      <br><p style="margin:0.4em">Fixed stack trace macro</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/stack_trace.h</div></div><hr class="fullhr"><u>Revision</u>: 873f5faae5c5ed73<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 01, 2017
+         (02:17:09 UTC)
+      <br><p style="margin:0.4em">Minor cleanup</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/disjoint_subsets.h</div><div class="row1">dlib/disjoint_subsets/disjoint_subsets_sized_abstract.h</div><div class="row2">dlib/test/disjoint_subsets_sized.cpp</div></div><div class="logb"><div class="bsolid"><b><font color="red">Deleted</font></b></div><div class="row2">dlib/disjoint_subsets_sized.h</div></div><hr class="fullhr"><u>Revision</u>: 62ff0d5e218bf64e<br><u>Author</u>: <a href="mailto:facug91@users.noreply.github.com">Facundo Galán</a><br><u>Date</u>: Dec 01, 2017
+         (06:08:37 UTC)
+      <br><p style="margin:0.4em">disjoint_subsets: add get_number_of_sets and get_size_of_set functions (#880)
+
+* disjoint_subsets: make clear and sizde functions noexcept
+
+* disjoint_subsets: add get_number_of_sets function, documentations and tests
+
+* disjoint_subsets: add get_size_of_set function, documentation and tests
+
+* Split disjoint_subsets in a hierarchy.
+
+Modify disjoint_subsets to make it a valid base class.
+Add new class disjoint_subsets_sized, with information about number of
+subsets, and size of each subset.
+Add necessary unit test for the new class.
+
+* Replace tabs by spaces.
+
+* Remove virtuals from disjoint_subsets, and modify
+disjoint_subsets_sized.
+
+Now disjoint_subsets_sized is implemented in terms of disjoint_subsets,
+instead of inherit from it.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/disjoint_subsets/disjoint_subsets.h</div><div class="row1">dlib/disjoint_subsets/disjoint_subsets_abstract.h</div><div class="row2">dlib/test/CMakeLists.txt</div><div class="row1">dlib/test/disjoint_subsets.cpp</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">dlib/disjoint_subsets/disjoint_subsets_sized.h</div><div class="row1">dlib/disjoint_subsets/disjoint_subsets_sized_abstract.h</div><div class="row2">dlib/disjoint_subsets_sized.h</div><div class="row1">dlib/test/disjoint_subsets_sized.cpp</div></div><hr class="fullhr"><u>Revision</u>: a8e2ca4db2cad5ab<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Dec 01, 2017
+         (-05:26:31 UTC)
+      <br><p style="margin:0.4em">This example still uses a lot of visual studio ram.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 7b24b43d4934cd42<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 30, 2017
+         (17:38:29 UTC)
+      <br><p style="margin:0.4em">These examples compile now in visual studio due to the recent pragma directive added to core.h.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 0d8e0e4d8693b596<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 30, 2017
+         (17:14:04 UTC)
+      <br><p style="margin:0.4em">Added a pragma statement that tells visual studio to not recursively inline
+functions very much when using the dnn tools, since otherwise it will sometimes
+take hours to compile.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/core.h</div></div><hr class="fullhr"><u>Revision</u>: c4b5bc05e2518b49<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (14:28:53 UTC)
+      <br><p style="margin:0.4em">clarified docs</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/optimization_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: ebccbb9697063feb<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (07:25:35 UTC)
+      <br><p style="margin:0.4em">Just moved the try block to reduce the indentation level.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/optimization_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: fa87479f3b07250e<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (07:23:43 UTC)
+      <br><p style="margin:0.4em">Updated example to use C++11 style code and also to show the new find_max_global() routine.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/optimization_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: d74613f7712c5c08<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (05:23:36 UTC)
+      <br><p style="margin:0.4em">Added python example for find_max_global()</p><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">python_examples/global_optimization.py</div></div><hr class="fullhr"><u>Revision</u>: ab3d942fd3dc8009<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (05:07:00 UTC)
+      <br><p style="margin:0.4em">Added a python interface to find_max_global()</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/CMakeLists.txt</div><div class="row1">tools/python/src/dlib.cpp</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">tools/python/src/global_optimization.cpp</div></div><hr class="fullhr"><u>Revision</u>: 3a8cd8c8896637b7<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (04:57:33 UTC)
+      <br><p style="margin:0.4em">Clarified spec</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_max_global_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: eea1a2316f0f3011<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (04:29:36 UTC)
+      <br><p style="margin:0.4em">Fixed find_max_global() overload that was ignoring one of its arguments.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_max_global.h</div></div><hr class="fullhr"><u>Revision</u>: 9057d374b5e4a471<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (03:26:16 UTC)
+      <br><p style="margin:0.4em">Switched this example to use the svm C instead of nu trainer.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/model_selection_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: e1e54852a26acc4e<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (03:07:36 UTC)
+      <br><p style="margin:0.4em">Minor changes to avoid compiler warnings.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/trainer.h</div><div class="row1">dlib/test/matrix2.cpp</div></div><hr class="fullhr"><u>Revision</u>: 2e65de540ea90531<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (03:00:08 UTC)
+      <br><p style="margin:0.4em">Changed default solver epsilon so that it will solve to full floating point
+precision by default.  If the user is OK with less precision they can change
+it.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_max_global.h</div><div class="row1">dlib/global_optimization/find_max_global_abstract.h</div><div class="row2">dlib/global_optimization/global_function_search.h</div><div class="row1">dlib/global_optimization/global_function_search_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: be19c47b84915aa5<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 25, 2017
+         (02:42:48 UTC)
+      <br><p style="margin:0.4em">Fixing code for visual studio</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_max_global.h</div></div><hr class="fullhr"><u>Revision</u>: fde4ddad8f0d8355<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 24, 2017
+         (17:04:25 UTC)
+      <br><p style="margin:0.4em">Made this example program use the new find_max_global() instead of grid search
+and BOBYQA.  This greatly simplifies the example.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/model_selection_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: 94e5ee808b75aea0<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 24, 2017
+         (16:44:09 UTC)
+      <br><p style="margin:0.4em">Made find_max_global() automatically apply a log-scale transform to variables
+that obviously need it.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_max_global.h</div><div class="row1">dlib/global_optimization/find_max_global_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 8dbe632e7ae48b62<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 24, 2017
+         (12:22:37 UTC)
+      <br><p style="margin:0.4em">Added more docs</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 1f2da9dd6649cc45<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 24, 2017
+         (04:56:26 UTC)
+      <br><p style="margin:0.4em">Cleaned up the code a bit.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search.cpp</div><div class="row1">dlib/global_optimization/global_function_search.h</div><div class="row2">dlib/global_optimization/global_function_search_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 83b80390d22efd73<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 23, 2017
+         (06:43:32 UTC)
+      <br><p style="margin:0.4em">Renamed find_global_maximum() to find_max_global()</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization.h</div><div class="row1">dlib/test/global_optimization.cpp</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">dlib/global_optimization/find_max_global.h</div><div class="row1">dlib/global_optimization/find_max_global_abstract.h</div></div><div class="logb"><div class="bsolid"><b><font color="red">Deleted</font></b></div><div class="row2">dlib/global_optimization/find_global_maximum.h</div><div class="row1">dlib/global_optimization/find_global_maximum_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: f3f63a3ba3e9c1b3<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 23, 2017
+         (06:30:01 UTC)
+      <br><p style="margin:0.4em">More cleanup and added more tests</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_global_maximum.h</div><div class="row1">dlib/global_optimization/find_global_maximum_abstract.h</div><div class="row2">dlib/global_optimization/global_function_search.cpp</div><div class="row1">dlib/test/global_optimization.cpp</div></div><hr class="fullhr"><u>Revision</u>: af6c65cc775eb452<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 23, 2017
+         (05:57:00 UTC)
+      <br><p style="margin:0.4em">Fixed spec</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_global_maximum_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: c5139c043a41820b<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 23, 2017
+         (05:03:11 UTC)
+      <br><p style="margin:0.4em">A bit of cleanup and documentation</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_global_maximum.h</div><div class="row1">dlib/global_optimization/global_function_search.cpp</div><div class="row2">dlib/global_optimization/global_function_search.h</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">dlib/global_optimization/find_global_maximum_abstract.h</div><div class="row1">dlib/global_optimization/global_function_search_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: f2fbc879e04e27b4<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 23, 2017
+         (02:59:10 UTC)
+      <br><p style="margin:0.4em">Fixed and clarified spec</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/upper_bound_function_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: ff1a5b18cefecfc9<br><u>Author</u>: <a href="mailto:hanno.jaspers@googlemail.com">hannometer</a><br><u>Date</u>: Nov 22, 2017
+         (12:42:15 UTC)
+      <br><p style="margin:0.4em">imglab: select next/previous image with 's' and 'w' (#964)
+
+* imglab: select next/previous image with 's' and 'w'
+
+* imglab: make 'w' and 's' keys behave like UP and DOWN keys; add 'about' text</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/imglab/src/metadata_editor.cpp</div></div><hr class="fullhr"><u>Revision</u>: 2ed19144e2c265df<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 22, 2017
+         (08:06:19 UTC)
+      <br><p style="margin:0.4em">Made the loss dumping between learning rate changes a little more relaxed.  In
+particular, rather than just dumping exactly 400 of the last loss values, it
+now dumps 400 + 10% of the loss buffer.  This way, the amount of the dump is
+proportional to the steps without progress threshold.  This is better because
+when the user sets the steps without progress to something larger it probably
+means you need to look at more loss values to determine that we should stop,
+so dumping more in that case ought to be better.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/trainer.h</div></div><hr class="fullhr"><u>Revision</u>: 68f78b1253264fd6<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 20, 2017
+         (16:36:04 UTC)
+      <br><p style="margin:0.4em">Added global_function_search unit test</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/test/global_optimization.cpp</div></div><hr class="fullhr"><u>Revision</u>: be23f984586d49aa<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 20, 2017
+         (16:13:49 UTC)
+      <br><p style="margin:0.4em">more cleanup</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search.cpp</div><div class="row1">dlib/global_optimization/global_function_search.h</div></div><hr class="fullhr"><u>Revision</u>: 1fd281172beef8dd<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 20, 2017
+         (14:55:07 UTC)
+      <br><p style="margin:0.4em">Cleanup</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search.cpp</div><div class="row1">dlib/global_optimization/global_function_search.h</div></div><hr class="fullhr"><u>Revision</u>: 57ed42324f584cf5<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 20, 2017
+         (14:31:20 UTC)
+      <br><p style="margin:0.4em">Cleaned up the compile_time_integer_list and make_compile_time_integer_range
+types and put them into their own file.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/core.h</div><div class="row1">dlib/global_optimization/find_global_maximum.h</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">dlib/metaprogramming.h</div></div><hr class="fullhr"><u>Revision</u>: 57e1dc1fd861432c<br><u>Author</u>: <a href="mailto:hesam.ohadi@gmail.com">Kino</a><br><u>Date</u>: Nov 20, 2017
+         (19:52:24 UTC)
+      <br><p style="margin:0.4em">generic image all the way - colormaps.h (#971)
+
+Still hunting down pre-generic_image implementations</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/colormaps.h</div></div><hr class="fullhr"><u>Revision</u>: e48fc4a638ad7f55<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 20, 2017
+         (13:48:14 UTC)
+      <br><p style="margin:0.4em">Changed python build script to append rather than overwrite CMAKE_PREFIX_PATH.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/add_python_module</div></div><hr class="fullhr"><u>Revision</u>: 8b67b8d494e687cf<br><u>Author</u>: <a href="mailto:juha.reunanen@gmail.com">Juha Reunanen</a><br><u>Date</u>: Nov 19, 2017
+         (19:53:50 UTC)
+      <br><p style="margin:0.4em">Problem: log loss may become infinite, if g[idx] goes zero (#938)
+
+* Problem: log loss may become infinite, if g[idx] goes zero
+Solution: limit the input of the log function to 1e-6 (or more)
+
+* Parameterize the safe_log epsilon limit, and make the default value 1e-10</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div></div><hr class="fullhr"><u>Revision</u>: 2dd8e4eef3a78bd7<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 18, 2017
+         (16:40:44 UTC)
+      <br><p style="margin:0.4em">Made the global_function_search object use the faster incremental
+upper_bound_function::add().  Also fixed some issues in the solver.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search.cpp</div><div class="row1">dlib/global_optimization/global_function_search.h</div></div><hr class="fullhr"><u>Revision</u>: e2ee96d36b67f5ca<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 17, 2017
+         (16:42:29 UTC)
+      <br><p style="margin:0.4em">Added a .add() to upper_bound_function so that the upper bound can be quickly
+updated without needing to resolve the whole QP.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/upper_bound_function.h</div><div class="row1">dlib/global_optimization/upper_bound_function_abstract.h</div><div class="row2">dlib/test/global_optimization.cpp</div></div><hr class="fullhr"><u>Revision</u>: 4aeb8a7ab0494de8<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 15, 2017
+         (12:20:36 UTC)
+      <br><p style="margin:0.4em">Made normalization code more robust and a bit cleaner.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/upper_bound_function.h</div></div><hr class="fullhr"><u>Revision</u>: e85ac655088251e8<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 17, 2017
+         (14:07:41 UTC)
+      <br><p style="margin:0.4em">Added loss_dot layer</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div><div class="row1">dlib/dnn/loss_abstract.h</div><div class="row2">dlib/test/dnn.cpp</div></div><hr class="fullhr"><u>Revision</u>: f82ca631041817aa<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 17, 2017
+         (11:55:24 UTC)
+      <br><p style="margin:0.4em">Upgraded the con_ layer so that you can set the nr or nc to 0 in the layer
+specification and this means "make the filter cover the whole input image
+dimension".  So it's just an easy way to make a filter sized exactly so that it
+will have one output along that dimension.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/layers.h</div><div class="row1">dlib/dnn/layers_abstract.h</div><div class="row2">dlib/test/dnn.cpp</div></div><hr class="fullhr"><u>Revision</u>: 9636a74b9406a9c9<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 17, 2017
+         (06:40:44 UTC)
+      <br><p style="margin:0.4em">Added softmax_all layer.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/cpu_dlib.cpp</div><div class="row1">dlib/dnn/cpu_dlib.h</div><div class="row2">dlib/dnn/cudnn_dlibapi.cpp</div><div class="row1">dlib/dnn/cudnn_dlibapi.h</div><div class="row2">dlib/dnn/layers.h</div><div class="row1">dlib/dnn/layers_abstract.h</div><div class="row2">dlib/dnn/tensor_tools.cpp</div><div class="row1">dlib/dnn/tensor_tools.h</div><div class="row2">dlib/test/dnn.cpp</div></div><hr class="fullhr"><u>Revision</u>: 31485fb7c99010ea<br><u>Author</u>: <a href="mailto:hesam.ohadi@gmail.com">Kino</a><br><u>Date</u>: Nov 17, 2017
+         (18:41:55 UTC)
+      <br><p style="margin:0.4em">generic_image all the way (#921)
+
+* generic_image all the way
+
+tried to hunt down and correct the functions that were using a
+non-generic_image approach to dlib’s generic images.
+
+* generic image fix fix
+
+Had to change a couple of const_image_view to non-const versions so array access is possible in the rest of the code
+
+* same
+
+same
+
+* back to sanity</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/gui_widgets/base_widgets.h</div><div class="row1">dlib/gui_widgets/canvas_drawing.h</div></div><hr class="fullhr"><u>Revision</u>: bc5b7f8157b4db2c<br><u>Author</u>: <a href="mailto:nineamin@hotmail.com">Amin Cheloh</a><br><u>Date</u>: Nov 17, 2017
+         (25:38:48 UTC)
+      <br><p style="margin:0.4em">Update dnn_mmod_find_cars2_ex.cpp (#966)</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/dnn_mmod_find_cars2_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: 4520ef38452cdfef<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 16, 2017
+         (16:45:43 UTC)
+      <br><p style="margin:0.4em">Work around visual studio's lack of C++11 support.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/find_global_maximum.h</div></div><hr class="fullhr"><u>Revision</u>: e3376d54a97a613b<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 15, 2017
+         (04:24:50 UTC)
+      <br><p style="margin:0.4em">Removed unneeded assert</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/global_optimization/global_function_search.cpp</div></div><hr class="fullhr"><u>Revision</u>: 3745fccf08fd71e1<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 15, 2017
+         (02:10:50 UTC)
+      <br><p style="margin:0.4em">Changed network filename to something more descriptive.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/dnn_semantic_segmentation_ex.cpp</div><div class="row1">examples/dnn_semantic_segmentation_ex.h</div><div class="row2">examples/dnn_semantic_segmentation_train_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: 90a9d9bda445c006<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 15, 2017
+         (02:06:33 UTC)
+      <br><p style="margin:0.4em">Minor tweaks to spec</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/interpolation_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 529ad0fe8c57ddd6<br><u>Author</u>: <a href="mailto:juha.reunanen@gmail.com">Juha Reunanen</a><br><u>Date</u>: Nov 15, 2017
+         (16:01:52 UTC)
+      <br><p style="margin:0.4em">Add semantic segmentation example (#943)
+
+* Add example of semantic segmentation using the PASCAL VOC2012 dataset
+
+* Add note about Debug Information Format when using MSVC
+
+* Make the upsampling layers residual as well
+
+* Fix declaration order
+
+* Use a wider net
+
+* trainer.set_iterations_without_progress_threshold(5000); // (was 20000)
+
+* Add residual_up
+
+* Process entire directories of images (just easier to use)
+
+* Simplify network structure so that builds finish even on Visual Studio (faster, or at all)
+
+* Remove the training example from CMakeLists, because it's too much for the 32-bit MSVC++ compiler to handle
+
+* Remove the probably-now-unnecessary set_dnn_prefer_smallest_algorithms call
+
+* Review fix: remove the batch normalization layer from right before the loss
+
+* Review fix: point out that only the Visual C++ compiler has problems.
+Also expand the instructions how to run MSBuild.exe to circumvent the problems.
+
+* Review fix: use dlib::match_endings
+
+* Review fix: use dlib::join_rows. Also add some comments, and instructions where to download the pre-trained net from.
+
+* Review fix: make formatting comply with dlib style conventions.
+
+* Review fix: output training parameters.
+
+* Review fix: remove #ifndef __INTELLISENSE__
+
+* Review fix: use std::string instead of char*
+
+* Review fix: update interpolation_abstract.h to say that extract_image_chips can now take the interpolation method as a parameter
+
+* Fix whitespace formatting
+
+* Add more comments
+
+* Fix finding image files for inference
+
+* Resize inference test output to the size of the input; add clarifying remarks
+
+* Resize net output even in calculate_accuracy
+
+* After all crop the net output instead of resizing it by interpolation
+
+* For clarity, add an empty line in the console output</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/interpolation.h</div><div class="row1">dlib/image_transforms/interpolation_abstract.h</div><div class="row2">examples/CMakeLists.txt</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">examples/dnn_semantic_segmentation_ex.cpp</div><div class="row1">examples/dnn_semantic_segmentation_ex.h</div><div class="row2">examples/dnn_semantic_segmentation_train_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: 7a224fc4691efc6f<br><u>Author</u>: <a href="mailto:info@sebastian-hoeffner.de">Sebastian Höffner</a><br><u>Date</u>: Nov 14, 2017
+         (22:24:39 UTC)
+      <br><p style="margin:0.4em">Adding missing implementation of tabbed_display::selected_tab (#957)</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/gui_widgets/widgets.cpp</div><div class="row1">dlib/gui_widgets/widgets.h</div></div><hr class="fullhr"><u>Revision</u>: acde092fa979ba10<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 14, 2017
+         (01:17:28 UTC)
+      <br><p style="margin:0.4em">merged</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div><div class="row1">dlib/cmake_utils/cmake_find_blas.txt</div><div class="row2">dlib/config.h.in</div><div class="row1">dlib/matrix/lapack/fortran_id.h</div></div><hr class="fullhr"><u>Revision</u>: 2d32d19bd7ac7024<br><u>Author</u>: <a href="mailto:sean.warren09@imperial.ac.uk">Sean Warren</a><br><u>Date</u>: Nov 14, 2017
+         (32:57:00 UTC)
+      <br><p style="margin:0.4em">Determine lapack fortran linking convention in CMake (#934)
+
+* Determine lapack fortran linking convention in CMake
+
+Looks for lapack function with and without trailing underscore - allows use of CLAPACK on windows where functions are decorated but fortran_id.h otherwise assumes they are not
+
+* Use enable_preprocessor_switch for LAPACK decoration detection
+
+* Add lapack decoration defines to config.h.in
+
+* Use correct variable for lapack_libraries</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div><div class="row1">dlib/cmake_utils/cmake_find_blas.txt</div><div class="row2">dlib/config.h.in</div><div class="row1">dlib/matrix/lapack/fortran_id.h</div></div><hr class="fullhr"><u>Revision</u>: 000b01cb844fcf11<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 13, 2017
+         (17:41:07 UTC)
+      <br><p style="margin:0.4em">Added tools for doing global optimization.  The main new tools here are
+find_global_maximum() and global_function_search.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div><div class="row1">dlib/all/source.cpp</div><div class="row2">dlib/global_optimization.h</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">dlib/global_optimization/find_global_maximum.h</div><div class="row1">dlib/global_optimization/global_function_search.cpp</div><div class="row2">dlib/global_optimization/global_function_search.h</div></div><hr class="fullhr"><u>Revision</u>: d804080cfbd4f055<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 13, 2017
+         (17:38:38 UTC)
+      <br><p style="margin:0.4em">Made bigint use explicit relational operator functions rather than the overly
+general templates in dlib::relational_operators.  I did this because the
+templates in dlib::relational_operators sometimes cause clashes with other
+code in irritating ways.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/bigint/bigint_kernel_1.h</div><div class="row1">dlib/bigint/bigint_kernel_2.h</div><div class="row2">dlib/bigint/bigint_kernel_abstract.h</div><div class="row1">dlib/bigint/bigint_kernel_c.h</div></div><hr class="fullhr"><u>Revision</u>: 401ebab9989a1911<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 13, 2017
+         (00:56:57 UTC)
+      <br><p style="margin:0.4em">Added missing #include</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/svm/svm_c_linear_dcd_trainer.h</div></div><hr class="fullhr"><u>Revision</u>: d76fe4993d93f60f<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 12, 2017
+         (10:16:25 UTC)
+      <br><p style="margin:0.4em">Added solve_trust_region_subproblem_bounded()</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/optimization/optimization_trust_region.h</div><div class="row1">dlib/optimization/optimization_trust_region_abstract.h</div><div class="row2">dlib/test/optimization.cpp</div></div><hr class="fullhr"><u>Revision</u>: 29e547c001fcfd09<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 12, 2017
+         (09:18:34 UTC)
+      <br><p style="margin:0.4em">Added upper_bound_function object.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/test/CMakeLists.txt</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">dlib/global_optimization.h</div><div class="row1">dlib/global_optimization/upper_bound_function.h</div><div class="row2">dlib/global_optimization/upper_bound_function_abstract.h</div><div class="row1">dlib/test/global_optimization.cpp</div></div><hr class="fullhr"><u>Revision</u>: 433312b1d9357e8a<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 12, 2017
+         (02:14:48 UTC)
+      <br><p style="margin:0.4em">Reduce parallelism in build to avoid travis running out of RAM.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/travis/build-and-test.sh</div></div><hr class="fullhr"><u>Revision</u>: b5743c2df812daa6<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 11, 2017
+         (03:42:16 UTC)
+      <br><p style="margin:0.4em">Fixed deserialize()</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div></div><hr class="fullhr"><u>Revision</u>: 33608ad54a5bb598<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 11, 2017
+         (03:37:29 UTC)
+      <br><p style="margin:0.4em">merged</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div><div class="row1">dlib/dnn/loss_abstract.h</div><div class="row2">dlib/matrix/matrix_op.h</div></div><hr class="fullhr"><u>Revision</u>: 0a45b02fc198563b<br><u>Author</u>: <a href="mailto:juha.reunanen@gmail.com">Juha Reunanen</a><br><u>Date</u>: Nov 11, 2017
+         (17:37:00 UTC)
+      <br><p style="margin:0.4em">Add support for non-scale-invariant MMOD (#809)
+
+* Add capability to train scale-variant MMOD models
+
+* Review fixes: change bool scale_invariant to strongly typed enum, etc
+
+* Add serialization and deserialization of assumed_input_layer_type
+
+* Fix code formatting
+
+* Rename things as per review feedback
+
+* Review fix: move enum use_image_pyramid outside mmod_options
+
+* Continue execution with net, if deserialization of shape predictor fails
+
+* Revert "Continue execution with net, if deserialization of shape predictor fails"
+
+This reverts commit 8ea4482c043b5b98b97ed5b78bfc6916a1e2a453.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div><div class="row1">dlib/dnn/loss_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 8a0e025e1b29dd7a<br><u>Author</u>: <a href="mailto:pierrefenoll@gmail.com">Pierre Fenoll</a><br><u>Date</u>: Nov 11, 2017
+         (15:21:55 UTC)
+      <br><p style="margin:0.4em">pedantic: fix "extra `;`" warnings when compiling with -Wpedantic (#906)</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/matrix/matrix_op.h</div></div><hr class="fullhr"><u>Revision</u>: ac98a4faa14f7718<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 10, 2017
+         (13:11:08 UTC)
+      <br><p style="margin:0.4em">merged</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/dlibConfig.cmake.in</div><div class="row1">dlib/test/dnn.cpp</div><div class="row2">tools/python/src/decision_functions.cpp</div><div class="row1">tools/python/src/testing_results.h</div></div><hr class="fullhr"><u>Revision</u>: 403d8c86c47fd6a4<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 10, 2017
+         (13:10:51 UTC)
+      <br><p style="margin:0.4em">Added loss_epsilon_insensitive_ layer</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div><div class="row1">dlib/dnn/loss_abstract.h</div><div class="row2">dlib/test/dnn.cpp</div></div><hr class="fullhr"><u>Revision</u>: b2720f8536b180f8<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 10, 2017
+         (12:42:40 UTC)
+      <br><p style="margin:0.4em">Updated code to work with new regression test output.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/decision_functions.cpp</div><div class="row1">tools/python/src/testing_results.h</div></div><hr class="fullhr"><u>Revision</u>: 21b164c92e18ddc3<br><u>Author</u>: <a href="mailto:sean.warren09@imperial.ac.uk">Sean Warren</a><br><u>Date</u>: Nov 09, 2017
+         (32:36:20 UTC)
+      <br><p style="margin:0.4em">Remove explicit specification of library path in dlibConfig.cmake (#935)
+
+* Remove explicit specification of library path in dlib.cmake
+Enables side-by-side multi configuration build on windows
+
+* Add dlib_LIBS
+
+For backwards compatability</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/dlibConfig.cmake.in</div></div><hr class="fullhr"><u>Revision</u>: 70e18693527ac105<br><u>Author</u>: <a href="mailto:otaciliodearaujo@gmail.com">OtacilioNeto</a><br><u>Date</u>: Nov 07, 2017
+         (13:27:54 UTC)
+      <br><p style="margin:0.4em">Fix issue https://github.com/davisking/dlib/issues/925 (#928)
+
+* This fix suggested by davisking make unit tests more reliable. Fix issue https://github.com/davisking/dlib/issues/925
+
+* This fix suggested by davisking make unit tests more reliable. Fix issue https://github.com/davisking/dlib/issues/925</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/test/dnn.cpp</div></div><hr class="fullhr"><u>Revision</u>: 10e00477fa63e058<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 10, 2017
+         (11:56:37 UTC)
+      <br><p style="margin:0.4em">Changed test_regression_function() and cross_validate_regression_trainer() to
+output 2 more statistics, which are the mean absolute error and the standard
+deviation of the absolute error.  This means these functions now return 4D
+rather than 2D vectors.
+
+I also made test_regression_function() take a non-const reference to the
+regression function so that DNN objects can be tested.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/svm/cross_validate_regression_trainer.h</div><div class="row1">dlib/svm/cross_validate_regression_trainer_abstract.h</div><div class="row2">dlib/test/svm.cpp</div></div><hr class="fullhr"><u>Revision</u>: 46bc892f13f4af2b<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 10, 2017
+         (11:52:20 UTC)
+      <br><p style="margin:0.4em">Fixed compiler warning</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/random_cropper.h</div></div><hr class="fullhr"><u>Revision</u>: 642123a7196c9a3d<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 05, 2017
+         (05:36:48 UTC)
+      <br><p style="margin:0.4em">Made unit tests more reliable</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/test/dnn.cpp</div></div><hr class="fullhr"><u>Revision</u>: fdae9df8388b9142<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 05, 2017
+         (02:57:34 UTC)
+      <br><p style="margin:0.4em">Added notes about not using visual studio 2017 since it doesn't support C++11.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/add_python_module</div></div><hr class="fullhr"><u>Revision</u>: 39d0d0b1d246ada2<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 05, 2017
+         (02:37:52 UTC)
+      <br><p style="margin:0.4em">Don't use CUDA/DNN stuff in Visual Studio 2017.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/set_compiler_specific_options.cmake</div></div><hr class="fullhr"><u>Revision</u>: acdd9b3689390da2<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 05, 2017
+         (02:37:29 UTC)
+      <br><p style="margin:0.4em">Fixed grammar in comment</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 42baaa1336a719f0<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 05, 2017
+         (03:13:26 UTC)
+      <br><p style="margin:0.4em">Changed the mean squared loss layers to return a loss that's the MSE, not
+0.5*MSE.  The only thing this effects is the logging messages that print during
+training, which were confusing since the reported loss was half the size you
+would expect.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div></div><hr class="fullhr"><u>Revision</u>: fbc0668caaa254af<br><u>Author</u>: <a href="mailto:gilles.rochefort@gmail.com">Gilles Rochefort</a><br><u>Date</u>: Nov 04, 2017
+         (03:40:25 UTC)
+      <br><p style="margin:0.4em">Remove unused variable (#919)</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/gui_widgets/widgets.cpp</div></div><hr class="fullhr"><u>Revision</u>: efc2148c344b67b6<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 02, 2017
+         (06:24:25 UTC)
+      <br><p style="margin:0.4em">Fixed timing print() so the output scales are set correctly.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/timing.h</div></div><hr class="fullhr"><u>Revision</u>: 9a22b9508a392b92<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 02, 2017
+         (01:43:15 UTC)
+      <br><p style="margin:0.4em">Updated comments to reflect recent API changes.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/dnn_mmod_dog_hipsterizer.cpp</div><div class="row1">examples/dnn_mmod_face_detection_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: 64fec2dc9fd89914<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 01, 2017
+         (12:30:42 UTC)
+      <br><p style="margin:0.4em">Changed the timing code to use the C++11 high resolution clock and
+atomics.  This makes the timing code a lot more precise.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/timing.h</div></div><hr class="fullhr"><u>Revision</u>: 884b61e889c177f8<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Nov 01, 2017
+         (12:25:32 UTC)
+      <br><p style="margin:0.4em">Fixed error in TIME_THIS().  It was still printing in seconds when it said
+minutes in the output.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/time_this.h</div></div><hr class="fullhr"><u>Revision</u>: 7b92a9a00a49dbb7<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 31, 2017
+         (13:01:47 UTC)
+      <br><p style="margin:0.4em">Upgraded the input layer so you can give input&lt;std::array&lt;matrix&lt;T&gt;,K&gt;&gt; types
+as input layer specifications.  This will create input tensors with K
+channels.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/input.h</div><div class="row1">dlib/dnn/input_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 6f4d3e69a48e2101<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 29, 2017
+         (04:57:52 UTC)
+      <br><p style="margin:0.4em">Made hamming_distance() a little more general.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/general_hash/count_bits.h</div></div><hr class="fullhr"><u>Revision</u>: 22cdf079eacf608f<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 28, 2017
+         (16:44:43 UTC)
+      <br><p style="margin:0.4em">Made resizable_tensor objects not perform a reallocation if they are resized to
+be smaller.  Instead, they now behave like std::vector in that they just change
+their nominal size but keep the same memory, only reallocating if they are
+resized to something larger than their underlying memory block.
+
+This change makes some uses of dlib faster, in particular, running networks on
+a large set of images of differing sizes will now run faster since there won't
+be any GPU reallocations, which are notoriously slow.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/tensor.h</div><div class="row1">dlib/dnn/tensor_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 13d6a64237b61d6c<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 28, 2017
+         (16:35:59 UTC)
+      <br><p style="margin:0.4em">Suppress compiler warning</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/layers.h</div></div><hr class="fullhr"><u>Revision</u>: b57f4c4dcc045d2d<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 28, 2017
+         (16:35:25 UTC)
+      <br><p style="margin:0.4em">Always compile the C++11 related unit tests.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/test/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 25be87f5d99131d1<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 28, 2017
+         (14:45:48 UTC)
+      <br><p style="margin:0.4em">Added set_num_outputs() to fc_ layer.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/layers.h</div><div class="row1">dlib/dnn/layers_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 1c2bc68743e1bf3d<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 28, 2017
+         (08:25:32 UTC)
+      <br><p style="margin:0.4em">Improved loss_mmod_ warning message.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div></div><hr class="fullhr"><u>Revision</u>: 7b52f75e2b6d18a4<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 28, 2017
+         (08:23:47 UTC)
+      <br><p style="margin:0.4em">Made requires clause a little more sensible.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/layers.h</div><div class="row1">dlib/dnn/layers_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 4426725482f44a1a<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 28, 2017
+         (06:48:54 UTC)
+      <br><p style="margin:0.4em">Fixed a bug in dlib's MS Windows GUI code that was introduced a little while back
+when we switched everything to std::shared_ptr.  Turns out std::shared_ptr has
+some surprising limitations.  This change fixes a bug where the program crashes or hangs
+sometimes during program shutdown.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/gui_core/gui_core_kernel_1.cpp</div><div class="row1">dlib/gui_core/gui_core_kernel_1.h</div></div><hr class="fullhr"><u>Revision</u>: 7ed3b7f4b8689cc3<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 28, 2017
+         (04:50:42 UTC)
+      <br><p style="margin:0.4em">Fixed sqlite include path finding.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 4ff1888a8eae7073<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 28, 2017
+         (-04:06:42 UTC)
+      <br><p style="margin:0.4em">Don't ever try to use the busted version of libjpeg in anaconda.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 77f940ee5761f271<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 27, 2017
+         (19:42:40 UTC)
+      <br><p style="margin:0.4em">Make cmake output less confusing</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/cmake_find_blas.txt</div></div><hr class="fullhr"><u>Revision</u>: 1cc61b3ff9ec7f6b<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 27, 2017
+         (19:39:04 UTC)
+      <br><p style="margin:0.4em">Clarified build instructions</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/add_python_module</div></div><hr class="fullhr"><u>Revision</u>: 87ee21307afdeb32<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 27, 2017
+         (15:30:58 UTC)
+      <br><p style="margin:0.4em">Changed graph construction for chinese_whispers() so that each face is always
+included in the edge graph.  If it isn't then the output labels from
+chinese_whispers would be missing faces in this degenerate case.  So basically this fixes a bug
+where chinese_whispers(), when called from python, would sometimes return a labels array
+that doesn't include labels for all the inputs.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/face_recognition.cpp</div></div><hr class="fullhr"><u>Revision</u>: ee1ce5738cc9de54<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 27, 2017
+         (15:29:52 UTC)
+      <br><p style="margin:0.4em">Changed graph construction for chinese_whispers() so that each face is always
+included in the edge graph.  If it isn't then the output labels from
+chinese_whispers would be missing faces in this degenerate case.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/dnn_face_recognition_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: 7b16aaaf91276334<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 27, 2017
+         (03:27:57 UTC)
+      <br><p style="margin:0.4em">Made random_cropper use cleaner and unbiased dlib::rand interface.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/random_cropper.h</div></div><hr class="fullhr"><u>Revision</u>: 9de7bcf981a9f1c4<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 27, 2017
+         (01:58:34 UTC)
+      <br><p style="margin:0.4em">Cleanup</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/cmake_find_blas.txt</div></div><hr class="fullhr"><u>Revision</u>: e1a474dbb93c1b0e<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 27, 2017
+         (01:50:15 UTC)
+      <br><p style="margin:0.4em">Removed old cruft not needed anymore since we are doing this kind
+of thing with cmake targets already in set_compiler_specific_options.cmake.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/cmake_find_blas.txt</div></div><hr class="fullhr"><u>Revision</u>: 7f132fb15a20d933<br><u>Author</u>: <a href="mailto:sean.warren09@imperial.ac.uk">Sean Warren</a><br><u>Date</u>: Oct 27, 2017
+         (31:45:53 UTC)
+      <br><p style="margin:0.4em">Win lapack (#913)
+
+* Fall back on find_package for blas, lapack on Windows
+
+* Remove debugging message</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/cmake_find_blas.txt</div></div><hr class="fullhr"><u>Revision</u>: 32fa776b8f8593e3<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 25, 2017
+         (01:42:31 UTC)
+      <br><p style="margin:0.4em">Updated python code to use the new dlib::jitter_image() instead of hacking it
+out of the random_cropper.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/face_recognition.cpp</div></div><hr class="fullhr"><u>Revision</u>: 14329e4dc3c8d816<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 24, 2017
+         (18:10:02 UTC)
+      <br><p style="margin:0.4em">Changed the random_cropper's set_min_object_size() routine to take min box
+dimensions in the same format as the mmod_options object (i.e. two lengths
+measured in pixels).  This should make defining random_cropping strategies that
+are consistent with MMOD settings much more straightforward since you can just
+take the mmod_options settings and give them to the random_cropper and it will
+do the right thing.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/random_cropper.h</div><div class="row1">dlib/image_transforms/random_cropper_abstract.h</div><div class="row2">examples/dnn_mmod_ex.cpp</div><div class="row1">examples/dnn_mmod_train_find_cars_ex.cpp</div><div class="row2">examples/random_cropper_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: c97caf6837a6039c<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 24, 2017
+         (17:13:02 UTC)
+      <br><p style="margin:0.4em">Made the metric learning example do image jittering.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/dnn_face_recognition_ex.cpp</div><div class="row1">examples/dnn_metric_learning_on_images_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: f800181d4ac7f2be<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 24, 2017
+         (04:02:44 UTC)
+      <br><p style="margin:0.4em">Cleaned up jitter_image() code and moved it into dlib proper.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/interpolation.h</div><div class="row1">dlib/image_transforms/interpolation_abstract.h</div><div class="row2">examples/dnn_face_recognition_ex.cpp</div></div><hr class="fullhr"><u>Revision</u>: 0ab057582f342b35<br><u>Author</u>: <a href="mailto:sean.warren09@imperial.ac.uk">Sean Warren</a><br><u>Date</u>: Oct 24, 2017
+         (23:00:49 UTC)
+      <br><p style="margin:0.4em">Use banded Cholesky factorization if possible (#857)
+
+* Use banded Cholesky factorization if possible
+Computation cost from n.n.n -&gt; n.n.b where b is band size
+
+* Tidy up whitespace
+
+* Remove typo
+
+*  Escape from banded matrix detection correctly
+
+* Use LAPACK banded Cholesky factorisation where possible
+
+* Add banded chol tests
+
+* Add test for banded chol in column major layout
+
+* Use row major layout for banded chol - more efficient as we will pass to LAPACK</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/matrix/matrix_la.h</div><div class="row1">dlib/test/matrix.cpp</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">dlib/matrix/lapack/pbtrf.h</div></div><hr class="fullhr"><u>Revision</u>: 328dc37c8ddee740<br><u>Author</u>: <a href="mailto:gilles.rochefort@gmail.com">Gilles Rochefort</a><br><u>Date</u>: Oct 21, 2017
+         (18:16:36 UTC)
+      <br><p style="margin:0.4em">Add some operator() to cv_image for compatibility with mmod loss. (#900)
+
+* Add some operator() to cv_image for compatibility with mmod.
+
+* Update documentation</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/opencv/cv_image.h</div><div class="row1">dlib/opencv/cv_image_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 60074c1d09eeae3d<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 22, 2017
+         (12:06:11 UTC)
+      <br><p style="margin:0.4em">Make sure the test loss the trainer logs to the console never gets suck at
+infinity.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/trainer.h</div></div><hr class="fullhr"><u>Revision</u>: 6abb5e6d9db7c7ee<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 20, 2017
+         (17:45:14 UTC)
+      <br><p style="margin:0.4em">Updated spec</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/layers_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: a6aa7dcce8c1a59a<br><u>Author</u>: <a href="mailto:gilles.rochefort@gmail.com">Gilles Rochefort</a><br><u>Date</u>: Oct 21, 2017
+         (05:44:00 UTC)
+      <br><p style="margin:0.4em">Missing interfaces in add_prev for compatibility with mmod loss. (#901)</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/layers.h</div></div><hr class="fullhr"><u>Revision</u>: a4cb99a0e7387575<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 20, 2017
+         (17:37:54 UTC)
+      <br><p style="margin:0.4em">Sometimes the loss_mmod_ layer could experience excessively long runtime during
+early iterations since the model might produce a huge number of false alarms
+while the detector is still bad.  Processing all these detections can cause it
+to run slowly until the model is good enough to avoid really excessive amounts
+of false alarms.  This change puts more of a limit on the number of false
+alarms processed during those early iterations and avoids the slowdown.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div></div><hr class="fullhr"><u>Revision</u>: 057ffb4905097dc3<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 20, 2017
+         (17:34:34 UTC)
+      <br><p style="margin:0.4em">The loss returned by compute_loss_value_and_gradient() wasn't quite right.  It
+doesn't effect normal use, but it's still wrong and this change fixes it.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div></div><hr class="fullhr"><u>Revision</u>: 357d1e7a16728a17<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 20, 2017
+         (12:54:49 UTC)
+      <br><p style="margin:0.4em">Added install_target_output_folder option to matlab cmake scripts.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/matlab/CMakeLists.txt</div><div class="row1">dlib/matlab/cmake_mex_wrapper</div></div><hr class="fullhr"><u>Revision</u>: 5ed5aae2ecddb978<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 19, 2017
+         (16:57:24 UTC)
+      <br><p style="margin:0.4em">Fixed the terrible breaking change to the tensor object I made earlier today :(</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/gpu_data.cpp</div></div><hr class="fullhr"><u>Revision</u>: 88387be877309652<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 19, 2017
+         (08:09:29 UTC)
+      <br><p style="margin:0.4em">Improved cmake error messages about CUDA support.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div><div class="row1">dlib/cmake_utils/test_for_cudnn/find_cudnn.txt</div></div><hr class="fullhr"><u>Revision</u>: 89be073b2c0b05a9<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 19, 2017
+         (06:50:40 UTC)
+      <br><p style="margin:0.4em">Changed tensor so that, when reallocating memory, it frees any existing memory
+*before* allocating new memory.  It used to be the other way around which
+caused momentary spikes of increased memory usage.  This could put you over the
+total memory available in some cases which is obviously less than ideal
+behavior.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/gpu_data.cpp</div></div><hr class="fullhr"><u>Revision</u>: 41fd094e76fbf10b<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 18, 2017
+         (06:17:46 UTC)
+      <br><p style="margin:0.4em">Fixed bug</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">python_examples/svm_binary_classifier.py</div></div><hr class="fullhr"><u>Revision</u>: 8e56a6e868922dd4<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 18, 2017
+         (03:36:31 UTC)
+      <br><p style="margin:0.4em">Added python binary classifier example</p><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">python_examples/svm_binary_classifier.py</div></div><hr class="fullhr"><u>Revision</u>: 8f8305a983a0b19f<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 17, 2017
+         (15:20:29 UTC)
+      <br><p style="margin:0.4em">Fixed weird wording.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: e85d60737bb8b890<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 17, 2017
+         (15:18:57 UTC)
+      <br><p style="margin:0.4em">Made comment more clear.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">examples/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 0f7d11f4b1d5aa28<br><u>Author</u>: <a href="mailto:juha.reunanen@gmail.com">Juha Reunanen</a><br><u>Date</u>: Oct 18, 2017
+         (05:12:38 UTC)
+      <br><p style="margin:0.4em">Add get_net parameter that allows to call the function without forcing flush to disk (#875)
+
+* Add get_net parameter allowing to call the function without forced flush to disk (see the discussion in #869)
+
+* A blindfolded attempt to fix compile error on the CI server</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/trainer.h</div><div class="row1">dlib/dnn/trainer_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: f68ab44974cf7948<br><u>Author</u>: <a href="mailto:jpblackburn@users.noreply.github.com">jpblackburn</a><br><u>Date</u>: Oct 17, 2017
+         (15:11:16 UTC)
+      <br><p style="margin:0.4em">Allow cross_validate_trainer_threaded to use non-double data (#883)</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/svm/svm_threaded.h</div><div class="row1">dlib/svm/svm_threaded_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 363b3a9af2b16ccd<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 17, 2017
+         (06:31:27 UTC)
+      <br><p style="margin:0.4em">Fixed path</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/java/cmake_swig_jni</div></div><hr class="fullhr"><u>Revision</u>: ede782ed7a0e1063<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 17, 2017
+         (06:24:23 UTC)
+      <br><p style="margin:0.4em">Yet more cmake cleanup</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/java/CMakeLists.txt</div><div class="row1">dlib/java/cmake_swig_jni</div></div><hr class="fullhr"><u>Revision</u>: 3ee69a0b0c1e7635<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 17, 2017
+         (06:02:30 UTC)
+      <br><p style="margin:0.4em">More cmake script cleanup</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/matlab/CMakeLists.txt</div><div class="row1">dlib/matlab/cmake_mex_wrapper</div></div><hr class="fullhr"><u>Revision</u>: ee24815d4e80afb0<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 17, 2017
+         (05:45:18 UTC)
+      <br><p style="margin:0.4em">Fix deprecation warning from new cmake</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 78502ee2818a0c55<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 17, 2017
+         (15:02:31 UTC)
+      <br><p style="margin:0.4em">Made cmake print a very explicit error message if you try to use a version of gcc that is too old.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/set_compiler_specific_options.cmake</div></div><hr class="fullhr"><u>Revision</u>: c8c3eda2450daee4<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 16, 2017
+         (17:36:18 UTC)
+      <br><p style="margin:0.4em">More cmake cleanup</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/add_python_module</div><div class="row1">dlib/test/CMakeLists.txt</div><div class="row2">dlib/test/gui/CMakeLists.txt</div><div class="row1">dlib/test/tools/CMakeLists.txt</div><div class="row2">tools/convert_dlib_nets_to_caffe/CMakeLists.txt</div><div class="row1">tools/htmlify/CMakeLists.txt</div><div class="row2">tools/imglab/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: b911418ea135e232<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 16, 2017
+         (17:34:17 UTC)
+      <br><p style="margin:0.4em">suppress compiler warnings</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/layers.h</div></div><hr class="fullhr"><u>Revision</u>: 295fe04c36ceb719<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 16, 2017
+         (17:34:00 UTC)
+      <br><p style="margin:0.4em">Suppress compiler warnings</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/convert_dlib_nets_to_caffe/main.cpp</div></div><hr class="fullhr"><u>Revision</u>: 97616b17fb4a47d0<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 16, 2017
+         (17:11:16 UTC)
+      <br><p style="margin:0.4em">CMake tweaks to avoid errors in visual studio</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/set_compiler_specific_options.cmake</div><div class="row1">dlib/cmake_utils/use_cpp_11.cmake</div></div><hr class="fullhr"><u>Revision</u>: 9dd27d3f71028967<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 16, 2017
+         (16:55:28 UTC)
+      <br><p style="margin:0.4em">Some cmake script cleanup and refactoring.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">CMakeLists.txt</div><div class="row1">dlib/CMakeLists.txt</div><div class="row2">dlib/cmake</div><div class="row1">dlib/cmake_utils/add_global_compiler_switch.cmake</div><div class="row2">dlib/cmake_utils/dlibConfig.cmake.in</div><div class="row1">dlib/cmake_utils/test_for_cudnn/CMakeLists.txt</div><div class="row2">dlib/cmake_utils/use_cpp_11.cmake</div><div class="row1">examples/CMakeLists.txt</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">dlib/cmake_utils/set_compiler_specific_options.cmake</div></div><hr class="fullhr"><u>Revision</u>: 8bb39ca0f3ce4890<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 16, 2017
+         (16:55:07 UTC)
+      <br><p style="margin:0.4em">Removed cout statement.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/test/rand.cpp</div></div><hr class="fullhr"><u>Revision</u>: 7f61e0dc695f1b25<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 16, 2017
+         (05:22:01 UTC)
+      <br><p style="margin:0.4em">Fixed compiler error due to #define nonsense in visual studio.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/test/rand.cpp</div></div><hr class="fullhr"><u>Revision</u>: 305132ba0defe138<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 16, 2017
+         (02:49:03 UTC)
+      <br><p style="margin:0.4em">Prevent include path clashes from system installs of dlib as well as suppress
+warning messages from boost and python system header files.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/add_python_module</div></div><hr class="fullhr"><u>Revision</u>: 95e28ba0bbe3e2b0<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 15, 2017
+         (11:53:33 UTC)
+      <br><p style="margin:0.4em">I accidentally slightly changed the cropping behavior of
+get_face_chip_details() when used with the 68 point landmark model about a
+month ago.  This change reverts it back to the previous behavior.  The change
+was very minor, so it shouldn't matter either way.  But being consistent is
+important and I'm changing it back.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/interpolation.h</div></div><hr class="fullhr"><u>Revision</u>: e365cd0ef50efe07<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 14, 2017
+         (06:29:29 UTC)
+      <br><p style="margin:0.4em">Added warning messages when users use the old non-target based cmake variables.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/cmake_utils/dlibConfig.cmake.in</div></div><hr class="fullhr"><u>Revision</u>: dcb2417f7b3180a6<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 10, 2017
+         (05:59:59 UTC)
+      <br><p style="margin:0.4em">merged</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/array/array_kernel.h</div><div class="row1">dlib/array/array_kernel_abstract.h</div><div class="row2">dlib/data_io/load_image_dataset.h</div><div class="row1">dlib/data_io/load_image_dataset_abstract.h</div><div class="row2">dlib/dnn/layers.h</div><div class="row1">dlib/dnn/layers_abstract.h</div><div class="row2">dlib/image_transforms/interpolation.h</div><div class="row1">dlib/image_transforms/interpolation_abstract.h</div><div class="row2">docs/docs/faq.xml</div><div class="row1">docs/docs/howto_contribute.xml</div><div class="row2">docs/docs/stylesheet.xsl</div><div class="row1">python_examples/face_clustering.py</div><div class="row2">python_examples/requirements.txt</div><div class="row1">python_examples/train_object_detector.py</div><div class="row2">tools/python/src/face_recognition.cpp</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">python_examples/face_alignment.py</div></div><hr class="fullhr"><u>Revision</u>: d855484b4a1244fb<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 10, 2017
+         (05:53:22 UTC)
+      <br><p style="margin:0.4em">Added assert to improve error messages.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/layers.h</div></div><hr class="fullhr"><u>Revision</u>: 7ceecf3981ed53dd<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 10, 2017
+         (05:52:43 UTC)
+      <br><p style="margin:0.4em">Added get_integer() and get_integer_in_range() to dlib::rand.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/rand/rand_kernel_1.h</div><div class="row1">dlib/rand/rand_kernel_abstract.h</div><div class="row2">dlib/test/rand.cpp</div></div><hr class="fullhr"><u>Revision</u>: c86b9956408f3b98<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 08, 2017
+         (03:49:50 UTC)
+      <br><p style="margin:0.4em">Made dlib::array able to push_back() from rvalues.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/array/array_kernel.h</div><div class="row1">dlib/array/array_kernel_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 8c35538741e4992a<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 08, 2017
+         (03:45:50 UTC)
+      <br><p style="margin:0.4em">Fixed missing inline</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/data_io/load_image_dataset.h</div></div><hr class="fullhr"><u>Revision</u>: 2a5c218298e3818a<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 07, 2017
+         (10:09:09 UTC)
+      <br><p style="margin:0.4em">Made add_image_left_right_flips() and add_image_rotations() work with
+mmod_rects in addition to rectangles and full_object_detections.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/interpolation.h</div><div class="row1">dlib/image_transforms/interpolation_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 52175140c4893822<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 07, 2017
+         (10:05:58 UTC)
+      <br><p style="margin:0.4em">Fixed load_image_dataset()'s skip_empty_images() option.  It wasn't skipping
+images that only have ignore boxes when you load into mmod_rects like it should
+have been.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/data_io/load_image_dataset.h</div><div class="row1">dlib/data_io/load_image_dataset_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 78459d399805fbf0<br><u>Author</u>: <a href="mailto:hwchiu@users.noreply.github.com">Hung-Wei Chiu</a><br><u>Date</u>: Sep 29, 2017
+         (31:20:11 UTC)
+      <br><p style="margin:0.4em">Fix warning (#851)
+
+* remove unused variable
+
+* modify variable type from int to size_t
+
+* fix previous delete, we need to call chinese_whispers here but we don't need its result now</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/face_recognition.cpp</div></div><hr class="fullhr"><u>Revision</u>: 4709c04600d4fef2<br><u>Author</u>: <a href="mailto:juha.reunanen@gmail.com">Juha Reunanen</a><br><u>Date</u>: Sep 28, 2017
+         (15:48:17 UTC)
+      <br><p style="margin:0.4em">cont layer: allow to set the number of filters at runtime (#845)
+
+* cont layer: allow to set the number of filters at runtime
+(implementation essentially copied from con layer)
+
+* Document the new constructor cont_(num_con_outputs o), and the function set_num_filters</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/layers.h</div><div class="row1">dlib/dnn/layers_abstract.h</div></div><hr class="fullhr"><u>Revision</u>: 7a39aef0b82941ff<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Oct 01, 2017
+         (04:44:03 UTC)
+      <br><p style="margin:0.4em">Clarified docs</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">python_examples/train_object_detector.py</div></div><hr class="fullhr"><u>Revision</u>: 592ac3782bf56bfe<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Sep 22, 2017
+         (17:52:15 UTC)
+      <br><p style="margin:0.4em">Clarified comment and updated requirements.txt</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">python_examples/face_alignment.py</div><div class="row1">python_examples/requirements.txt</div></div><hr class="fullhr"><u>Revision</u>: 2a70697db1083d39<br><u>Author</u>: <a href="mailto:varun@lemniscate.io">Varun Chatterji</a><br><u>Date</u>: Sep 19, 2017
+         (31:08:54 UTC)
+      <br><p style="margin:0.4em">Cleaned up example file.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">python_examples/face_alignment.py</div></div><hr class="fullhr"><u>Revision</u>: 085759181aa54b74<br><u>Author</u>: <a href="mailto:varun@lemniscate.io">Varun Chatterji</a><br><u>Date</u>: Sep 19, 2017
+         (21:08:51 UTC)
+      <br><p style="margin:0.4em">Added code to get face_chip images..</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">tools/python/src/face_recognition.cpp</div></div><div class="logb"><div class="bsolid"><b><font color="blue">Added</font></b></div><div class="row2">python_examples/face_alignment.py</div></div><hr class="fullhr"><u>Revision</u>: 18a411362346426a<br><u>Author</u>: <a href="mailto:varun@lemniscate.io">Varun Chatterji</a><br><u>Date</u>: Sep 18, 2017
+         (27:54:26 UTC)
+      <br><p style="margin:0.4em">Added size and padding as optional parameters</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">python_examples/face_clustering.py</div><div class="row1">tools/python/src/face_recognition.cpp</div></div><hr class="fullhr"><u>Revision</u>: a467d4803a8ffa95<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Sep 26, 2017
+         (07:49:29 UTC)
+      <br><p style="margin:0.4em">Made cmake error messages a little clearer</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div></div><hr class="fullhr"><u>Revision</u>: 40d617294a1414db<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Sep 20, 2017
+         (17:10:59 UTC)
+      <br><p style="margin:0.4em">Fixed a bug in how the mmod_options automatically determines detection window
+sizes.  It would pick a bad size in some cases.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div></div><hr class="fullhr"><u>Revision</u>: 1bae38fc5e550b34<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Sep 19, 2017
+         (02:29:49 UTC)
+      <br><p style="margin:0.4em">Made unit test more robust</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/test/ranking.cpp</div></div><hr class="fullhr"><u>Revision</u>: e58c8efa04f0e6e9<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Sep 15, 2017
+         (07:15:34 UTC)
+      <br><p style="margin:0.4em">Added loss_ranking_ layer</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/dnn/loss.h</div><div class="row1">dlib/dnn/loss_abstract.h</div><div class="row2">dlib/test/ranking.cpp</div></div><hr class="fullhr"><u>Revision</u>: adcb5e3312af6896<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Sep 17, 2017
+         (11:16:41 UTC)
+      <br><p style="margin:0.4em">Fixed a bug in the random_cropper where it might crash due to division by 0
+if small images are given as input.</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/image_transforms/random_cropper.h</div></div><hr class="fullhr"><u>Revision</u>: 2049560d94e4b066<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Sep 17, 2017
+         (04:28:45 UTC)
+      <br><p style="margin:0.4em">Record last changeset and set PATCH version to 99</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div><div class="row1">docs/.logger_revnum</div></div><hr class="fullhr"><u>Revision</u>: fb51c77524ff13ca<br><u>Author</u>: <a href="mailto:davis@dlib.net">Davis King</a><br><u>Date</u>: Sep 17, 2017
+         (04:28:29 UTC)
+      <br><p style="margin:0.4em">Created release v19.7</p><div class="logb"><div class="bsolid"><b><font color="black">Modified</font></b></div><div class="row2">dlib/CMakeLists.txt</div></div><hr class="fullhr"><br><center><a href="old_change_log.html">Old Change Logs</a></center><br></div></div></div><div id="bottom_content"></div></body></html>
