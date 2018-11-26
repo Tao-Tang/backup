@@ -16,26 +16,26 @@
 # include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
+#include "util.h"
 using namespace std;
  
-const int MAX_CHAR_NUM = 1<<28;//maximum length of a chromosome
+//const int MAX_CHAR_NUM = 1<<28;//maximum length of a chromosome
 const int code_rule[4] = {0, 1, 2, 3};//A-0; C-1; G-2; T-3; encoding rule //discarded
-const char invert_code_rule[4] = {'A', 'C', 'G', 'T'}; //decoding rule
+//const char invert_code_rule[4] = {'A', 'C', 'G', 'T'}; //decoding rule
 const int max_arr_num_bit = 30; //relate to length of hash table
 const int max_arr_num_bit_shift = max_arr_num_bit>>1; //half
 const int max_arr_num = 1<<max_arr_num_bit; // maximum length of hash table
 const int min_size = 1<<20; //minimum length for other arrays 
 
-const int sub_str_num = 20; //hash function; the modulus s
+//const int sub_str_num = 20; //hash function; the modulus s
 
-struct POSITION_RANGE { //an interval
-	int begin, length;//
-};
+//struct POSITION_RANGE { //an interval
+//	int begin, length;//
+//};
 
-struct POSITION_OTHER_CHAR {//for other characters
-	int pos, ch;
-};
+//struct POSITION_OTHER_CHAR {//for other characters
+//	int pos, ch;
+//};
 
 // this is set to compress the given range of tasks of a file list
 class hirgc
@@ -498,11 +498,7 @@ void hirgc::hirgc_single_ref_compress(char *result_folder, char *ref_file)
 	char res[1024];
 	char cmd[1024];
 
-	if(stat( result_folder, &info ) != 0)
-	{
-		sprintf(cmd,"mkdir %s",result_folder);
-		system(cmd);
-	}
+
 	
 	sprintf(ref,"%s",ref_file);	
 	readRefFile(ref);

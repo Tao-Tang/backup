@@ -25,6 +25,7 @@
 
 # include "dlib-19.8/dlib/clustering.h"
 # include "dlib-19.8/dlib/statistics.h"
+
 #define MAX(a,b) ((a) > (b) ? (a) : (b))
 using namespace std;
 //using namespace dlib;
@@ -194,7 +195,7 @@ std::vector<int> subtractive_clustering( Eigen::MatrixXd *input_matrix)
     }
 
     int current_centroid = max_index(pontential);
-    int max_clusters =   0.01*row > 10 ? 0.01*row : 10;
+    int max_clusters =   0.5*sqrt(row) > 10 ? 0.5*sqrt(row) : 10;
     double thresshold = 0.3 * pontential[current_centroid];
     centroids.push_back(current_centroid);
 
@@ -296,61 +297,7 @@ long double sum_of_variance(Eigen::MatrixXd *input_matrix)
     }
     printf("sum of var is %lf\n",sum_var);
     return sum_var;
-
 }
-
-/**
-Eigen::MatrixXd PCA(Eigen::MatrixXd *input_matrix, int n_component = 100)
-{
-    int row = input_matrix->rows();
-    int col = input_matrix->cols();
-
-    //Eigen::MatrixXd C = input_matrix->adjoint() * (*input_matrix);
-    Eigen::MatrixXd meanval = input_matrix->colwise().mean();
-    Eigen::RowVectorXd meanvecRow = meanval;
-    input_matrix->rowwise() -= meanvecRow;   
-    Eigen::MatrixXd C = input_matrix->transpose() * (*input_matrix);
-    printf("dimension of scatter matrix %d %d\n",C.rows(),C.cols());
-    for(int i = 0; i < C.rows(); i++ )
-    {
-        for(int j = 0; j < C.rows(); j++ )
-        {
-            if( std::isnan( C(i,j) ) )
-                C(i,j) = 1.0;
-        }
-    }
-
-    Eigen::SelfAdjointEigenSolver<Eigen::MatrixXd> eig;
-    //Eigen::EigenSolver<Eigen::MatrixXd> eig;
-    printf("compute eigen vectors:\n");
-    eig.compute(C);    
-    Eigen::MatrixXd vec = eig.eigenvectors().real();
-    Eigen::MatrixXd val = eig.eigenvalues().real();
-
-    for( int i = 0; i < vec.rows(); i++)
-    {
-        for(int j = 0; j < vec.cols(); j++)
-        {
-            if( std::isnan(vec(i,j)) )
-                vec(i,j) = 0.0;
-            vec(i,j) = vec(i,j) * 100;
-        }
-    }    
-
-    int dim = 0;
-    for (int i = val.rows()-1; i >= 0; --i)
-    {
-        dim = i;
-        if( val(i,0) <= 0.0001 )
-            break;
-    }
-    dim =  (val.rows()-dim) >= n_component ? n_component : dim;
-
-    Eigen::MatrixXd res = (*input_matrix) * vec.rightCols(val.rows() - dim);
-    printf("dimension of reduced matrix: %d * %d\n",res.rows(), res.cols());
-
-    return res;
-} **/
 
 
 Eigen::MatrixXd PCA(Eigen::MatrixXd *input_matrix, int n_component = 100)
@@ -427,75 +374,6 @@ Eigen::MatrixXd PCA(Eigen::MatrixXd *input_matrix, int n_component = 100)
     return result;
 } 
 
-/**
-Eigen::MatrixXd PCA(Eigen::MatrixXd *input_matrix, int n_component = 100)
-{
-    Eigen::MatrixXd result;
-    int row = input_matrix->rows();
-    int col = input_matrix->cols();
-
-    FILE *fp = fopen("selected_features.txt","w");
-    for(int i = 0; i < row ; i++)
-    {
-        for(int j = 0; j < col; j++)
-            fprintf(fp, "%lf ", (*input_matrix)(i,j) );
-        fprintf(fp,"\n");
-    }
-    fclose(fp);
-
-    Eigen::VectorXd new_vector;
-    Eigen::VectorXd col_mean(col);
-
-    Eigen::MatrixXd center_matrix(*input_matrix);
-    for(int i = 0; i <col; i++)
-    {
-        new_vector = input_matrix->col(i);
-        std::vector<double> current_column(new_vector.data(),new_vector.data() + new_vector.size() ); 
-        double sum = accumulate(current_column.begin(), current_column.end(), 0.0);
-        double mean = sum / current_column.size();
-        col_mean(i) = mean; 
-        for(int j = 0; j < row; j++)
-            center_matrix(j,i) -= mean;
-    }
-
-    Eigen::MatrixXd scatter_matrix = center_matrix.transpose() * center_matrix;
-    printf("dimension of scatter matrix:%d %d\n",scatter_matrix.rows(),scatter_matrix.cols());
-    Eigen::EigenSolver<Eigen::MatrixXd> es(scatter_matrix); 
-
-
-    //the princpal component of A
-
-    Eigen::VectorXd evalue_real = es.eigenvalues().real();
-    Eigen::MatrixXd evector_real = es.eigenvectors().real();
-    printf("egien matrix solved\n");
-    int count = -1;
-    for(int i = 0; i < col; i++)
-    {
-        if( evalue_real(i) < 0 )
-        {
-            count = i;
-            break;
-        }
-    }
-
-    if( count != -1 && count < n_component)
-    {
-        printf("since the %dth egien value is negative\n",count);
-        n_component = count;
-    }
-    Eigen::MatrixXd PC = Eigen::MatrixXd::Zero(col,n_component);
-
-    printf("square root of eigen values:\n");
-
-    PC = es.eigenvectors().real().leftCols(n_component);
-    result = (*input_matrix) * PC;
-    //result = PC.transpose() * (input_matrix->transpose() );
-    //result = result.transpose();
-    printf("dimension of result matrix:%d %d\n",result.rows(),result.cols());
-
-    return result;
-} **/
-
 Eigen::MatrixXd similarity(Eigen::MatrixXd *input_matrix)
 {
     double sum_var = sum_of_variance(input_matrix);
@@ -547,11 +425,11 @@ Eigen::MatrixXd similarity(Eigen::MatrixXd *input_matrix)
 
 
 
-Eigen::MatrixXd SF_selection(Eigen::MatrixXd *input_matrix)
+Eigen::MatrixXd SF_selection(Eigen::MatrixXd *input_matrix, int selected_number=1000)
 {
     int row = input_matrix->rows();
     int col = input_matrix->cols();    
-    int selected_number = MIN(1000,0.2 * col);
+
     Eigen::MatrixXd selected_features(input_matrix->rows(),selected_number);
 
     Eigen::MatrixXd w_matrix = similarity(input_matrix);
@@ -574,7 +452,7 @@ Eigen::MatrixXd SF_selection(Eigen::MatrixXd *input_matrix)
     }
 
     Eigen::MatrixXd l_matrix = d_matrix - w_matrix; 
-    printf("dimesnion of L: %d %d\n",l_matrix.rows(),l_matrix.cols());
+    printf("dimension of L: %d %d\n",l_matrix.rows(),l_matrix.cols());
     Eigen::MatrixXd Lap_matrix = d2_matrix * l_matrix * d2_matrix;
 
     std::map<int, double> ph1_map;
@@ -591,13 +469,11 @@ Eigen::MatrixXd SF_selection(Eigen::MatrixXd *input_matrix)
     int feature_index;
     for(int i = 0; i < selected_number; i++)
     {
-        printf("feature value %lf, index %d\n", it->first,it->second);
         feature_index = it->second;
         selected_features.col(i) = input_matrix->col(feature_index);
         //selected_features.col(i) = input_matrix->col(feature_index);
         ++it;
     }
-    exit(0);
     return selected_features;
 }
 
@@ -1022,17 +898,19 @@ public:
     int tuple_size, len,kept_dimension;
     std::vector<int> centroid_result;    
     std::vector<int> cluster_result;
-    preprocessor(string m_src, string m_result_path = "",string m_src_list = "",int m_len = 1000000,int m_tuple_size = 7,int m_kept_dimension = 0 )
+    preprocessor(string m_src, string m_result_path = "",string m_src_list = "",int m_len = 1000000,int m_tuple_size = 7,int m_kept_dimension = 1000)
                 : src(m_src), result_path(m_result_path), src_list(m_src_list), tuple_size(m_tuple_size), len(m_len), kept_dimension(m_kept_dimension) {}
 
     void preprocess()
     {
 
         search_files(src,src_list); 
-        printf("read length is set as %d (default 1000000), tuple size if set as %d(default 7)\n",len,tuple_size);
+        printf("read length is set as %d (default 1000000), tuple size if set as %d(default 7), reserved dimension is %d\n",len,tuple_size,kept_dimension);
         Eigen::MatrixXd freq = count_frequency(src,result_path,len, tuple_size,kept_dimension);
         Eigen::MatrixXd normalized_data = normalize(&freq);
-        Eigen::MatrixXd selected_features = SF_selection(&normalized_data);
+
+        //int selected_number = MIN(1000,0.2 * col); col = normalized_data->cols()
+        Eigen::MatrixXd selected_features = SF_selection(&normalized_data,kept_dimension);
         for( int i = 0; i < selected_features.rows(); i++)
         {
             for(int j = 0; j < selected_features.cols(); j++)

@@ -137,12 +137,16 @@ void Compressor::cluster_compress()
 void Compressor::ref_compress()
 {
 	printf("number of files: %d\n",file_list.size());
-
-	char res_folder[1024];
-	sprintf(res_folder,"%s",result_name.c_str());
+	char cmd[1024];;
 	char ref[1024];
 	sprintf(ref,"%s",ref_file.c_str());
 
+	char res_folder[1024];
+	sprintf(res_folder,"%s_ref",ref);
+
+	sprintf(cmd,"mkdir  %s",res_folder);
+	system(cmd);
+	
 	thread *threads[thread_number];
 	hirgc *hirgcs[thread_number];
 	int start = 0, task_number = file_list.size();
@@ -165,14 +169,20 @@ void Compressor::ref_compress()
 		delete threads[i];
 	}
 
-	char cmd[1024];;
+
 	char folder_buffer[1024];
 
 	sprintf(cmd,"tar -cf %s.tar -C %s .",res_folder,res_folder);
 	system(cmd);
-	sprintf(cmd,"./bsc e %s.tar %s.tar.bsc -b64p",res_folder,res_folder);
-	printf("bsc command is %s\n",cmd);
-	system(cmd);		
 
+	sprintf(cmd,"./bsc e %s.tar %s.tar.bsc -b64p",res_folder,res_folder);
+	system(cmd);
+
+	sprintf(cmd,"mkdir %s",result_name.c_str());
+	system(cmd);
+	sprintf(cmd,"mv %s.tar.bsc %s",res_folder,result_name.c_str());
+	system(cmd);
+	sprintf(cmd,"tar -cf %s.tar -C %s .",result_name.c_str(),result_name.c_str());		
+	system(cmd);
 	return;
 } 
