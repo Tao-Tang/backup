@@ -1,15 +1,22 @@
-# 2dring
-### 2dring - What is it?
-2dring is a utility designed for all-pairs correlation coefficient calcualtion in distributed computing (also potential for other all-pairs calculation). It reduces a half communcation cost compares to traditional all-pairs calcualtion scheme and hence sutiable for computing in HPC cluster. <br />
+# ECC
+### ECC - What is it?
+ECC is a reference selction algorithm for genome sequence set ( normally for a set of fasta files ). 
+ <br />
 
 ### Compile
 download this repository <br />
 ```
-cd 2dring 
-make
+cd ECC
+chmod +x make
+./make
 ```
 ### Usage
-mpirun -np <numprocs> 2dring <N> [number of vectors] <M> [length of each vector] <output> [path of output] <src> [path of src] <x_d> [x dimension of 2dring] <br />
+Process Mode: compute reference for each file in dataset
+```
+./ECC process -s <src> -r <result> -t <thread_number> 
+```
+
+
 ### Example 
 ```
 mpirun -np 32 2dring -N 1024 -M 1000 -output correaltion_matrix.txt -src sample_data.txt -x 2
@@ -18,4 +25,4 @@ or
 ```
 srun -n 16 -d 24 2dring -N 1024 -M 1000 -output correaltion_matrix.txt -src sample_data.txt -x 2
 ```
-Notice, currently numprocs should be divisible by xd, and numprocs/xd should be even. <br />
+<br />
