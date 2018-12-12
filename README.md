@@ -15,7 +15,7 @@ Process Mode: compute reference for each file in dataset, result is a text file 
 ```
 ./ECC p -s <src> -r <result>
 ```
-Compress Mode: Execute reference selection process and compress files based on selection result with HIRGC, output includes <result>.tar <result>_src.txt <result>_ref
+Compress Mode: Execute reference selection process and compress files based on selection result with HIRGC, output includes <result>.tar <result>_src.txt <result>_ref  <br />
 ```
 ./ECC c -s <src> -r <result> -t <thread_number> 
 ```
