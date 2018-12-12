@@ -24,7 +24,7 @@ Decompress Mode: decompress file
 ./ECC d  <result>
 ```
 ```
-<src>:  name of src file, each line records the file path of one sequence  <br />
-<result>: name of result file  <br />
-<thread_number>: number of threads used   <br />
+<src>:  name of src file, each line records the file path of one sequence  
+<result>: name of result file  
+<thread_number>: number of threads used
 ```
