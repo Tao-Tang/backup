@@ -7,8 +7,7 @@ ECC is a reference selction algorithm for genome sequence set ( normally for a s
 download this repository <br />
 ```
 cd ECC
-chmod +x make
-./make
+make
 ```
 ### Usage
 Process Mode: compute reference for each file in dataset, result is a text file with multiple lines, each line contains two file name, the first is reference sequence and second is target sequence.
